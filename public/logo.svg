@@ -1,0 +1,52 @@
+<svg width="320" height="64" viewBox="0 0 320 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Vibrant primary pulse red gradient -->
+    <linearGradient id="pcSvgRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF262C" />
+      <stop offset="50%" stop-color="#FF001E" />
+      <stop offset="100%" stop-color="#FF262C" />
+    </linearGradient>
+
+    <!-- Left Chevron Fold Shadow -->
+    <linearGradient id="pcSvgLeftFold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B0005" />
+      <stop offset="45%" stop-color="#B8000A" />
+      <stop offset="100%" stop-color="#FF2024" />
+    </linearGradient>
+
+    <!-- Right Chevron Fold Shadow -->
+    <linearGradient id="pcSvgRightFold" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7B0005" />
+      <stop offset="45%" stop-color="#B8000A" />
+      <stop offset="100%" stop-color="#FF2024" />
+    </linearGradient>
+
+    <!-- Trough Fold Shadow -->
+    <linearGradient id="pcSvgTroughFold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#800007" />
+      <stop offset="40%" stop-color="#C2000F" />
+      <stop offset="100%" stop-color="#FF2024" />
+    </linearGradient>
+  </defs>
+
+  <!-- Brand Symbol Mark (Scale ~0.7 centered at x=6, y=12) -->
+  <g transform="translate(6, 12) scale(0.72)">
+    <!-- Left Chevron (<) -->
+    <path d="M26 44 L10 28" stroke="url(#pcSvgLeftFold)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M26 12 L10 28" stroke="url(#pcSvgRed)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Pulse Waveform -->
+    <path d="M55.5 44 L63.5 28 H77" stroke="url(#pcSvgTroughFold)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M24 28 H40 L47.5 8 L55.5 44" stroke="url(#pcSvgRed)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Right Chevron (>) -->
+    <path d="M76 44 L92 28" stroke="url(#pcSvgRightFold)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M76 12 L92 28" stroke="url(#pcSvgRed)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Custom Engineered Wordmark: PULSECRAFT -->
+  <text x="86" y="32" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">PULSE<tspan fill="#FF2A2A">CRAFT</tspan></text>
+
+  <!-- Supporting Corporate Descriptor: TECHNOLOGIES INC. -->
+  <text x="86.5" y="47" font-family="'JetBrains Mono', 'SF Mono', monospace" font-size="9" font-weight="500" fill="#A1A1AA" letter-spacing="2.8">TECHNOLOGIES INC.</text>
+</svg>

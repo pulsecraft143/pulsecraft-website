@@ -1,0 +1,87 @@
+{
+  "contacts": [
+    {
+      "name": "Alexandre Mercier",
+      "email": "alex@montrealai.ca",
+      "projectType": "AI / LLM Custom Integration",
+      "budgetRange": ",000 - ,000",
+      "details": "Need high-speed RAG enterprise search for Canadian legal documents.",
+      "id": "req_1787955522293_4vig3",
+      "submittedAt": "2026-08-28T22:18:42.293Z",
+      "status": "new"
+    },
+    {
+      "id": "mock-1",
+      "name": "Sarah Jenkins",
+      "email": "s.jenkins@nexusfintech.io",
+      "company": "Nexus FinTech",
+      "phone": "+1 (416) 555-0199",
+      "projectType": "FinTech Mobile Application",
+      "budgetRange": "$50,000 - $100,000",
+      "timeline": "3-6 months",
+      "details": "Looking to engineer an ultra-fast cross-platform trading and portfolio analytics app with biometrics and real-time WebSockets.",
+      "submittedAt": "2026-08-20T14:32:00.000Z",
+      "status": "reviewed"
+    },
+    {
+      "id": "mock-2",
+      "name": "David Tremblay",
+      "email": "david@quebechealth.ca",
+      "company": "OmniHealth Canada",
+      "phone": "+1 (514) 555-8371",
+      "projectType": "AI Health Diagnostic System",
+      "budgetRange": "$100,000+",
+      "timeline": "6+ months",
+      "details": "We require a HIPAA/PIPEDA compliant LLM diagnostic assist system integrated with hospital EMR systems.",
+      "submittedAt": "2026-08-25T09:15:00.000Z",
+      "status": "new"
+    }
+  ],
+  "applications": [
+    {
+      "fullName": "Elena Rostova",
+      "email": "elena.rostova@engineer.ca",
+      "phone": "+1 647 555 9812",
+      "location": "Toronto, ON",
+      "positionId": "lead-mobile-engineer",
+      "positionTitle": "Lead Mobile Engineer (Kotlin / Swift)",
+      "resumeFileName": "Resume_Uploaded.pdf",
+      "message": "Excited about building 60fps mobile architectures at PulseCraft.",
+      "id": "app_1787955543217_kvafa",
+      "submittedAt": "2026-08-28T22:19:03.217Z",
+      "status": "pending"
+    },
+    {
+      "id": "app-mock-1",
+      "fullName": "Alexandre Roy",
+      "email": "alex.roy.dev@gmail.com",
+      "phone": "+1 (647) 555-4921",
+      "location": "Toronto, ON (Hybrid)",
+      "positionId": "senior-fullstack-engineer",
+      "positionTitle": "Senior Full-Stack Engineer (Next.js & Node.js)",
+      "linkedinUrl": "https://linkedin.com/in/alexandreroy",
+      "portfolioUrl": "https://alexroy.dev",
+      "resumeFileName": "Alexandre_Roy_Resume.pdf",
+      "message": "I have 7+ years of experience building high-scale TypeScript & React architectures and love PulseCraft’s engineering standards.",
+      "submittedAt": "2026-08-22T11:00:00.000Z",
+      "status": "screening"
+    }
+  ],
+  "subscribers": [
+    {
+      "id": "sub_1787955558527",
+      "email": "director@innovateventures.ca",
+      "subscribedAt": "2026-08-28T22:19:18.527Z"
+    },
+    {
+      "id": "sub-mock-1",
+      "email": "technology-lead@enterprisegroup.ca",
+      "subscribedAt": "2026-08-18T16:20:00.000Z"
+    },
+    {
+      "id": "sub-mock-2",
+      "email": "investor@vencapital.com",
+      "subscribedAt": "2026-08-24T18:45:00.000Z"
+    }
+  ]
+}

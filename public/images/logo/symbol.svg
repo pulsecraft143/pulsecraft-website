@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 56" fill="none">
+  <defs>
+    <!-- Vibrant primary pulse red gradient -->
+    <linearGradient id="pcRedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF1E24" />
+      <stop offset="50%" stop-color="#FF001E" />
+      <stop offset="100%" stop-color="#FF1E24" />
+    </linearGradient>
+
+    <!-- Left Chevron Fold Shadow -->
+    <linearGradient id="pcLeftChevronFold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B0005" />
+      <stop offset="45%" stop-color="#B8000A" />
+      <stop offset="100%" stop-color="#FF1E24" />
+    </linearGradient>
+
+    <!-- Right Chevron Fold Shadow -->
+    <linearGradient id="pcRightChevronFold" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7B0005" />
+      <stop offset="45%" stop-color="#B8000A" />
+      <stop offset="100%" stop-color="#FF1E24" />
+    </linearGradient>
+
+    <!-- Trough Fold Shadow -->
+    <linearGradient id="pcTroughFold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#800007" />
+      <stop offset="40%" stop-color="#C2000F" />
+      <stop offset="100%" stop-color="#FF1E24" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Chevron (<) -->
+  <g class="left-chevron">
+    <!-- Lower arm folding under with shadow -->
+    <path
+      d="M26 44 L10 28"
+      stroke="url(#pcLeftChevronFold)"
+      stroke-width="5.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Upper arm in front -->
+    <path
+      d="M26 12 L10 28"
+      stroke="url(#pcRedGrad)"
+      stroke-width="5.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- Pulse Waveform & Signal Bridge -->
+  <g class="pulse-wave">
+    <!-- Recovery ascending from trough to right terminal -->
+    <path
+      d="M55.5 44 L63.5 28 H77"
+      stroke="url(#pcTroughFold)"
+      stroke-width="5.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Left horizontal lead-in, sharp peak, plunge to trough -->
+    <path
+      d="M24 28 H40 L47.5 8 L55.5 44"
+      stroke="url(#pcRedGrad)"
+      stroke-width="5.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- Right Chevron (>) -->
+  <g class="right-chevron">
+    <!-- Lower arm folding under with shadow -->
+    <path
+      d="M76 44 L92 28"
+      stroke="url(#pcRightChevronFold)"
+      stroke-width="5.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Upper arm in front -->
+    <path
+      d="M76 12 L92 28"
+      stroke="url(#pcRedGrad)"
+      stroke-width="5.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>

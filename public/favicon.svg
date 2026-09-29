@@ -1,0 +1,48 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Vibrant primary pulse red gradient -->
+    <linearGradient id="favRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF262C" />
+      <stop offset="50%" stop-color="#FF001E" />
+      <stop offset="100%" stop-color="#FF262C" />
+    </linearGradient>
+
+    <!-- Left Chevron Fold Shadow -->
+    <linearGradient id="favLeftFold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B0005" />
+      <stop offset="45%" stop-color="#B8000A" />
+      <stop offset="100%" stop-color="#FF2024" />
+    </linearGradient>
+
+    <!-- Right Chevron Fold Shadow -->
+    <linearGradient id="favRightFold" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7B0005" />
+      <stop offset="45%" stop-color="#B8000A" />
+      <stop offset="100%" stop-color="#FF2024" />
+    </linearGradient>
+
+    <!-- Trough Fold Shadow -->
+    <linearGradient id="favTroughFold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#800007" />
+      <stop offset="40%" stop-color="#C2000F" />
+      <stop offset="100%" stop-color="#FF2024" />
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="#09090C" stroke="#26262E" stroke-width="1.5"/>
+
+  <!-- Centered Pulse Symbol -->
+  <g transform="translate(3, 16) scale(0.57)">
+    <!-- Left Chevron (<) -->
+    <path d="M26 44 L10 28" stroke="url(#favLeftFold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M26 12 L10 28" stroke="url(#favRed)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Pulse Waveform -->
+    <path d="M55.5 44 L63.5 28 H77" stroke="url(#favTroughFold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M24 28 H40 L47.5 8 L55.5 44" stroke="url(#favRed)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Right Chevron (>) -->
+    <path d="M76 44 L92 28" stroke="url(#favRightFold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M76 12 L92 28" stroke="url(#favRed)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
