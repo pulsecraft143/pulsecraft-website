@@ -6,7 +6,7 @@ export const LEADERSHIP: LeaderMember[] = [
     role: 'Founder & Chief Executive Officer',
     bio: 'Leading the vision, strategy, and global growth of PulseCraft Technologies Inc. Passionate about empowering businesses with transformative digital products, strategic design thinking, and scalable technology foundations.',
     quote: 'We built PulseCraft on a singular conviction: that exceptional engineering and uncompromising craftsmanship can turn bold ideas into world-changing digital products.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80',
+    image: '/images/asad-azhar.jpg',
     linkedinUrl: 'https://linkedin.com/in/asad-azhar',
     twitterUrl: 'https://twitter.com/asadazhar',
     expertise: ['Product Strategy', 'Global Growth', 'Technology Leadership', 'Venture Engineering'],
