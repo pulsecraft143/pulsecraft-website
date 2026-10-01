@@ -99,15 +99,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const organizationJsonLd = {
+  const localBusinessJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: SITE_CONFIG.legalName,
-    alternateName: SITE_CONFIG.name,
+    '@type': 'ProfessionalService',
+    '@id': `${SITE_CONFIG.url}/#organization`,
+    name: SITE_CONFIG.name,
+    legalName: SITE_CONFIG.legalName,
+    alternateName: SITE_CONFIG.shortName,
     url: SITE_CONFIG.url,
     logo: `${SITE_CONFIG.url}/favicon-512x512.png`,
     image: `${SITE_CONFIG.url}/og-image.jpg`,
     description: SITE_CONFIG.description,
+    telephone: SITE_CONFIG.contact.phone,
+    email: SITE_CONFIG.contact.general,
+    priceRange: '$$$$',
+    currenciesAccepted: 'CAD, USD, EUR, GBP',
+    paymentAccepted: 'Wire Transfer, Corporate Invoicing, Credit Card',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '149 Giboulee Path',
@@ -121,6 +128,15 @@ export default function RootLayout({
       latitude: SITE_CONFIG.headquarters.coordinates.lat,
       longitude: SITE_CONFIG.headquarters.coordinates.lng,
     },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '18:00',
+      },
+    ],
+    hasMap: SITE_CONFIG.headquarters.googleMapsDirectionsUrl,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: SITE_CONFIG.contact.phone,
@@ -129,10 +145,23 @@ export default function RootLayout({
       areaServed: 'Worldwide',
       availableLanguage: ['English', 'French'],
     },
+    founder: [
+      {
+        '@type': 'Person',
+        name: 'Asad Azhar',
+        jobTitle: 'Founder & Chief Executive Officer',
+      },
+      {
+        '@type': 'Person',
+        name: 'Adnan Bhatti',
+        jobTitle: 'Co-Founder & Chief Technology Officer',
+      },
+    ],
     sameAs: [
       SITE_CONFIG.socials.linkedin,
       SITE_CONFIG.socials.github,
       SITE_CONFIG.socials.twitter,
+      SITE_CONFIG.socials.instagram,
     ],
   };
 
@@ -150,6 +179,55 @@ export default function RootLayout({
     },
   };
 
+  const sitelinksJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        '@type': 'SiteNavigationElement',
+        position: 1,
+        name: 'About PulseCraft',
+        description: 'Story, mission, values, and executive leadership of PulseCraft Technologies Inc.',
+        url: `${SITE_CONFIG.url}/about`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 2,
+        name: 'Engineering Services',
+        description: 'AI engineering, mobile applications, distributed cloud systems, and modern web platforms.',
+        url: `${SITE_CONFIG.url}/services`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 3,
+        name: 'Enterprise Solutions',
+        description: 'Industry-tailored architectures for FinTech, MedTech, logistics, and enterprise scale.',
+        url: `${SITE_CONFIG.url}/solutions`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 4,
+        name: 'Case Studies & Work',
+        description: 'Explore high-scale digital platforms built for leading brands and startups.',
+        url: `${SITE_CONFIG.url}/work`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 5,
+        name: 'Careers at PulseCraft',
+        description: 'Join an elite engineering force building next-generation digital products.',
+        url: `${SITE_CONFIG.url}/careers`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 6,
+        name: 'Contact & Inquiries',
+        description: 'Connect with technical leadership at our Oshawa, Ontario headquarters.',
+        url: `${SITE_CONFIG.url}/contact`,
+      },
+    ],
+  };
+
   return (
     <html lang="en" className="dark">
       <head>
@@ -164,11 +242,15 @@ export default function RootLayout({
         <meta name="theme-color" content="#0B0B0D" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(sitelinksJsonLd) }}
         />
       </head>
       <body className="min-h-screen flex flex-col bg-dark-void text-white selection:bg-brand-red selection:text-white">
