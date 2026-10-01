@@ -64,17 +64,13 @@ export const HeroSection: React.FC = () => {
               </span>
 
               {/* Eyebrow Label Text */}
-              <span className="text-[11px] sm:text-xs font-sans font-medium tracking-[0.1em] text-zinc-300 uppercase flex items-center gap-1.5">
+              <span className="text-[11px] sm:text-xs font-sans font-medium tracking-[0.12em] text-zinc-300 uppercase flex items-center gap-2">
                 <span className="text-xs" role="img" aria-label="Canada">
                   🇨🇦
                 </span>
-                <span>CANADA</span>
-                <span className="text-zinc-500">·</span>
-                <span className="text-zinc-200">AI</span>
-                <span className="text-zinc-500">·</span>
-                <span>SOFTWARE</span>
-                <span className="text-zinc-500">·</span>
-                <span>ENGINEERING</span>
+                <span className="font-display font-bold text-white tracking-[0.14em]">PULSECRAFT</span>
+                <span className="text-zinc-600">|</span>
+                <span className="text-zinc-400 font-sans tracking-[0.08em]">CANADIAN ENTERPRISE TECHNOLOGY</span>
               </span>
             </motion.div>
 
@@ -83,16 +79,16 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...transitionConfig, delay: 0.2 }}
-              className="text-4xl sm:text-5xl lg:text-[56px] xl:text-[64px] font-display font-medium tracking-tight leading-[1.18] sm:leading-[1.22] text-[#FFFFFF]"
+              className="text-4xl sm:text-5xl lg:text-[60px] xl:text-[68px] font-display font-bold tracking-[-0.03em] leading-[1.12] sm:leading-[1.14] text-[#FFFFFF]"
             >
               Ideas Have a{' '}
-              <span className="text-[#FF2A2A] font-semibold">
+              <span className="text-[#FF2A2A] font-extrabold drop-shadow-[0_0_24px_rgba(255,42,42,0.35)]">
                 Pulse.
               </span>
               <br />
-              <span className="inline-block mt-1">
+              <span className="inline-block mt-2">
                 Intelligence Gives Them{' '}
-                <span className="text-[#FFFFFF] font-semibold">
+                <span className="text-[#FFFFFF] font-extrabold">
                   Life.
                 </span>
               </span>

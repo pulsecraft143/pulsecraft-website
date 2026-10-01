@@ -24,10 +24,10 @@ export const Logo: React.FC<LogoProps> = ({
   const idPrefix = useId().replace(/:/g, '');
 
   const sizeMap = {
-    sm: { width: 38, height: 21, brand: 'text-[16px]', sub: 'text-[8px]', gap: 'gap-2.5' },
-    md: { width: 46, height: 25, brand: 'text-[19px]', sub: 'text-[9px]', gap: 'gap-3' },
-    lg: { width: 58, height: 32, brand: 'text-[24px]', sub: 'text-[10.5px]', gap: 'gap-3.5' },
-    xl: { width: 78, height: 43, brand: 'text-[30px]', sub: 'text-[12px]', gap: 'gap-4' },
+    sm: { width: 40, height: 22, brand: 'text-[17px]', sub: 'text-[8.5px]', gap: 'gap-2.5' },
+    md: { width: 48, height: 26, brand: 'text-[21px]', sub: 'text-[9.5px]', gap: 'gap-3.5' },
+    lg: { width: 62, height: 34, brand: 'text-[26px]', sub: 'text-[11.5px]', gap: 'gap-4' },
+    xl: { width: 82, height: 45, brand: 'text-[32px]', sub: 'text-[13px]', gap: 'gap-4.5' },
   };
 
   const currentSize = sizeMap[size];
@@ -198,7 +198,7 @@ export const Logo: React.FC<LogoProps> = ({
   // Custom Engineered Wordmark: PULSECRAFT + TECHNOLOGIES INC.
   const BrandText = (
     <div className="flex flex-col leading-none select-none text-left whitespace-nowrap">
-      <div className={`font-sans font-bold ${currentSize.brand} tracking-[-0.025em] flex items-center`}>
+      <div className={`font-display font-extrabold ${currentSize.brand} tracking-[0.02em] flex items-center`}>
         <span style={{ color: pulseTextColor }}>
           PULSE
         </span>
@@ -208,7 +208,7 @@ export const Logo: React.FC<LogoProps> = ({
       </div>
       {variant !== 'icon' && (
         <span
-          className={`font-sans font-medium tracking-[0.14em] uppercase mt-1 ${currentSize.sub} ${subTextColor}`}
+          className={`font-display font-semibold tracking-[0.22em] uppercase mt-1.5 ${currentSize.sub} ${subTextColor}`}
         >
           Technologies Inc.
         </span>
