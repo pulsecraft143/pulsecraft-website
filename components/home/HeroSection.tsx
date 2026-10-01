@@ -139,7 +139,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ ...transitionConfig, delay: 0.52 }}
-              className="mt-8 pt-5 border-t border-zinc-800/60 flex flex-wrap items-center gap-5 text-xs text-zinc-400 font-mono"
+              className="mt-8 pt-5 border-t border-zinc-800/60 flex flex-wrap items-center gap-5 text-xs text-zinc-400 font-sans font-medium"
             >
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FF2A2A]" />

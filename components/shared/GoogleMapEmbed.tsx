@@ -52,10 +52,10 @@ export const GoogleMapEmbed: React.FC<GoogleMapEmbedProps> = ({
             {SITE_CONFIG.shortName} Canada HQ
           </span>
         </div>
-        <p className="text-[11px] font-mono text-zinc-400 truncate">
+        <p className="text-xs font-sans text-zinc-300 truncate">
           {address}
         </p>
-        <div className="mt-2 pt-2 border-t border-zinc-800 flex items-center justify-between text-[10px] font-mono text-zinc-500">
+        <div className="mt-2 pt-2 border-t border-zinc-800 flex items-center justify-between text-xs font-sans text-zinc-400">
           <span>GPS: {lat}° N, {Math.abs(lng)}° W</span>
           <a
             href={SITE_CONFIG.headquarters.googleMapsDirectionsUrl}

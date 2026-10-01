@@ -40,7 +40,7 @@ export default function ServicesPage() {
       <section className="py-16 sm:py-24 border-b border-dark-border relative overflow-hidden text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-red/10 rounded-full blur-[140px] pointer-events-none" />
         <div className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
+          <span className="px-3 py-1 rounded-full text-xs font-sans bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
             Full-Stack Engineering Disciplines
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-display font-semibold tracking-tight text-[#FFFFFF] max-w-3xl mx-auto leading-[1.18] sm:leading-[1.22]">
@@ -74,13 +74,13 @@ export default function ServicesPage() {
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF2A2A] font-semibold block mb-1">
-                    Service 0{index + 1}
+                  <span className="text-xs font-sans uppercase tracking-wider text-[#FF2A2A] font-semibold block mb-1">
+                    Capability 0{index + 1}
                   </span>
                   <h2 className="text-2xl sm:text-3xl font-display font-semibold text-white mb-2">
                     {service.title}
                   </h2>
-                  <p className="text-xs font-mono text-zinc-400 mb-3">
+                  <p className="text-xs font-sans text-zinc-300 mb-3 font-medium">
                     {service.tagline}
                   </p>
                   <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-5 font-normal">
@@ -89,7 +89,7 @@ export default function ServicesPage() {
 
                   {/* Deliverables */}
                   <div className="space-y-2 mb-6">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 font-semibold block mb-1">
+                    <span className="text-xs font-sans uppercase tracking-wider text-zinc-400 font-semibold block mb-1">
                       Key Deliverables & Capabilities
                     </span>
                     {service.deliverables.map((item) => (
@@ -102,14 +102,14 @@ export default function ServicesPage() {
 
                   {/* Technology Tags */}
                   <div className="mb-6">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 font-semibold block mb-1.5">
+                    <span className="text-xs font-sans uppercase tracking-wider text-zinc-400 font-semibold block mb-1.5">
                       Technologies & Frameworks
                     </span>
                     <div className="flex flex-wrap gap-1.5">
                       {service.technologies.map((t) => (
                         <span
                           key={t}
-                          className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300"
+                          className="px-2.5 py-0.5 rounded-md text-xs font-sans font-medium bg-zinc-900 border border-zinc-800 text-zinc-300"
                         >
                           {t}
                         </span>
@@ -133,10 +133,10 @@ export default function ServicesPage() {
                     <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red/5 rounded-full blur-3xl pointer-events-none" />
 
                     <div className="flex items-center justify-between pb-4 border-b border-zinc-800">
-                      <span className="text-xs font-mono uppercase tracking-wider text-[#FF2A2A]">
+                      <span className="text-xs font-sans uppercase tracking-wider text-[#FF2A2A] font-semibold">
                         Architecture Performance Metrics
                       </span>
-                      <span className="text-xs font-mono text-zinc-500">Service SLA</span>
+                      <span className="text-xs font-sans text-zinc-400 font-medium">Service SLA</span>
                     </div>
 
                     {/* Metrics Grid */}
@@ -146,7 +146,7 @@ export default function ServicesPage() {
                           <span className="text-xl font-semibold font-display text-[#FF2A2A] block mb-0.5">
                             {m.value}
                           </span>
-                          <span className="text-[10px] font-mono text-zinc-400">
+                          <span className="text-xs font-sans text-zinc-400">
                             {m.label}
                           </span>
                         </div>
@@ -155,7 +155,7 @@ export default function ServicesPage() {
 
                     {/* Feature Highlights */}
                     <div className="space-y-2.5 pt-5 border-t border-zinc-800">
-                      <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 block mb-1">
+                      <span className="text-xs font-sans uppercase tracking-wider text-zinc-400 font-semibold block mb-1">
                         Engineering Highlights
                       </span>
                       {service.features.map((feat) => (

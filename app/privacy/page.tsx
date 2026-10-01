@@ -15,7 +15,7 @@ export default function PrivacyPage() {
     <div className="bg-dark-void text-white pt-28 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 mb-8">
+        <div className="flex items-center gap-2 text-xs font-sans font-medium text-zinc-400 mb-8">
           <Link href="/" className="hover:text-zinc-300">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-brand-red font-medium">Privacy Policy</span>
@@ -25,15 +25,15 @@ export default function PrivacyPage() {
           <div className="p-2.5 rounded-xl bg-brand-red/10 border border-brand-red/30 text-brand-red">
             <ShieldCheck className="w-6 h-6" />
           </div>
-          <span className="text-xs font-mono uppercase tracking-widest text-zinc-400">
+          <span className="text-xs font-sans uppercase tracking-wider text-zinc-400 font-semibold">
             Canadian Legal Compliance
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight mb-4">
+        <h1 className="text-3xl sm:text-5xl font-display font-semibold text-white tracking-tight mb-4">
           Privacy Policy
         </h1>
-        <p className="text-xs font-mono text-zinc-500 mb-12">
+        <p className="text-xs font-sans text-zinc-400 mb-12">
           Effective Date: August 2026 | Governing Law: Canada (PIPEDA) & Province of Ontario
         </p>
 
@@ -92,8 +92,8 @@ export default function PrivacyPage() {
             <p>
               For any questions regarding our data governance or to request data modification/deletion, please contact:
             </p>
-            <div className="mt-3 p-4 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-300">
-              <p>Privacy Officer, {SITE_CONFIG.legalName}</p>
+            <div className="mt-3 p-4 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-sans text-zinc-300 space-y-1">
+              <p className="font-semibold text-white">Privacy Officer, {SITE_CONFIG.legalName}</p>
               <p>Email: {SITE_CONFIG.contact.general}</p>
               <p>Address: {SITE_CONFIG.headquarters.address}</p>
             </div>

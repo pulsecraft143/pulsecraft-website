@@ -108,8 +108,8 @@ export const LeadershipSection: React.FC<{ theme?: 'light' | 'dark' }> = ({
 
               {/* Editorial Details */}
               <div className="p-6 sm:p-8">
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF2A2A] font-semibold block mb-1">
-                  {leader.role.toUpperCase()}
+                <span className="text-xs font-sans uppercase tracking-wider text-[#FF2A2A] font-semibold block mb-1">
+                  {leader.role}
                 </span>
                 <h3
                   className={`text-xl sm:text-2xl font-display font-semibold tracking-tight ${
@@ -131,10 +131,10 @@ export const LeadershipSection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                   {leader.expertise.map((exp) => (
                     <span
                       key={exp}
-                      className={`px-2.5 py-0.5 rounded-md text-[11px] font-mono ${
+                      className={`px-3 py-1 rounded-full text-xs font-sans font-medium ${
                         isLight
                           ? 'bg-slate-100 text-slate-700 border border-slate-200'
-                          : 'bg-zinc-900 text-zinc-300 border border-zinc-800'
+                          : 'bg-zinc-900/90 text-zinc-300 border border-zinc-800'
                       }`}
                     >
                       {exp}

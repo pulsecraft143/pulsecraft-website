@@ -49,7 +49,7 @@ export const AboutPreview: React.FC = () => {
           className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end pb-12 border-b border-slate-200"
         >
           <div className="lg:col-span-7">
-            <span className="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-slate-100 text-slate-700 border border-slate-200 mb-3.5 inline-block">
+            <span className="px-3 py-1 rounded-full text-xs font-sans uppercase tracking-wider bg-slate-100 text-slate-700 border border-slate-200 mb-3.5 inline-block font-semibold">
               <span className="w-1.5 h-1.5 rounded-full bg-[#FF2A2A] inline-block mr-1.5" />
               About PulseCraft
             </span>
@@ -95,7 +95,7 @@ export const AboutPreview: React.FC = () => {
                   className="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-slate-300 transition-all group hover:-translate-y-0.5"
                 >
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-mono text-zinc-400">
+                    <span className="text-xs font-sans font-medium text-slate-400">
                       0{idx + 1}
                     </span>
                     <div className="p-2 rounded-lg bg-white border border-slate-200 text-[#FF2A2A]">

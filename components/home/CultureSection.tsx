@@ -55,7 +55,7 @@ export const CultureSection: React.FC = () => {
                   <h3 className="text-xl font-display font-bold text-white group-hover:text-red-400 transition-colors">
                     {val.name}
                   </h3>
-                  <p className="mt-1.5 text-xs font-mono text-brand-red font-medium">
+                  <p className="mt-1.5 text-xs font-sans text-brand-red font-medium">
                     {val.tagline}
                   </p>
                   <p className="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed">
@@ -63,7 +63,7 @@ export const CultureSection: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-zinc-800/80 text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
+                <div className="mt-6 pt-4 border-t border-zinc-800/80 text-xs font-sans text-zinc-400 uppercase tracking-wider">
                   PulseCraft Principle
                 </div>
               </div>

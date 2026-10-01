@@ -50,7 +50,7 @@ export const InsightsSection: React.FC = () => {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/90 backdrop-blur-md text-slate-900 font-semibold shadow-sm">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-sans bg-white/90 backdrop-blur-md text-slate-900 font-medium shadow-sm">
                     {article.category}
                   </span>
                 </div>
@@ -59,7 +59,7 @@ export const InsightsSection: React.FC = () => {
               {/* Content Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-3 text-xs text-slate-500 font-mono mb-3">
+                  <div className="flex items-center gap-3 text-xs text-slate-500 font-sans font-medium mb-3">
                     <span className="flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5" />
                       {article.readTime}

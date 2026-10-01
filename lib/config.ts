@@ -18,27 +18,28 @@ export const SITE_CONFIG = {
   headquarters: {
     country: 'Canada',
     region: 'Ontario',
-    city: 'Toronto',
+    city: 'Oshawa',
     address:
       process.env.NEXT_PUBLIC_REGISTERED_ADDRESS ||
-      '100 King Street West, Suite 5600, Toronto, ON M5X 1C9, Canada',
+      '149 Giboulee Path, Oshawa, ON L1L 0M7, Canada',
     coordinates: {
-      lat: parseFloat(process.env.NEXT_PUBLIC_MAP_LAT || '43.6487'),
-      lng: parseFloat(process.env.NEXT_PUBLIC_MAP_LNG || '-79.3817'),
+      lat: parseFloat(process.env.NEXT_PUBLIC_MAP_LAT || '43.9480'),
+      lng: parseFloat(process.env.NEXT_PUBLIC_MAP_LNG || '-78.9050'),
     },
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
     googleMapsDirectionsUrl:
-      'https://www.google.com/maps/dir/?api=1&destination=100+King+Street+West+Toronto+ON+Canada',
+      'https://www.google.com/maps/dir/?api=1&destination=149+Giboulee+Path+Oshawa+ON+Canada',
     officeHours: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
     timezone: 'EST (UTC-5)',
   },
 
   // Contact Channels
   contact: {
-    general: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'hello@pulsecrafttechnologies.com',
-    projects: process.env.NEXT_PUBLIC_PROJECTS_EMAIL || 'projects@pulsecrafttechnologies.com',
-    careers: process.env.NEXT_PUBLIC_CAREERS_EMAIL || 'careers@pulsecrafttechnologies.com',
-    phone: process.env.NEXT_PUBLIC_PHONE || '+1 (416) 800-7852',
+    general: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'support@pulsecrafttechnologies.com',
+    projects: process.env.NEXT_PUBLIC_PROJECTS_EMAIL || 'support@pulsecrafttechnologies.com',
+    careers: process.env.NEXT_PUBLIC_CAREERS_EMAIL || 'support@pulsecrafttechnologies.com',
+    support: process.env.NEXT_PUBLIC_SUPPORT_EMAIL || 'support@pulsecrafttechnologies.com',
+    phone: process.env.NEXT_PUBLIC_PHONE || '+12899277578',
   },
 
   // Social Links

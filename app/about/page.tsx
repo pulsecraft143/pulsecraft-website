@@ -28,7 +28,7 @@ export default function AboutPage() {
       <section className="relative py-16 sm:py-24 border-b border-dark-border overflow-hidden">
         <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-brand-red/10 rounded-full blur-[140px] pointer-events-none" />
         <div className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
+          <span className="px-3 py-1 rounded-full text-xs font-sans bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
             Our Purpose & Identity
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-display font-semibold tracking-tight text-[#FFFFFF] max-w-3xl mx-auto leading-[1.18] sm:leading-[1.22]">
@@ -48,20 +48,20 @@ export default function AboutPage() {
         <div className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-6">
-              <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF2A2A] font-semibold block mb-2">
+              <span className="text-xs font-sans uppercase tracking-wider text-[#FF2A2A] font-semibold block mb-2">
                 The PulseCraft Story
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-slate-900 mb-5 leading-tight">
                 Born in Canada. Engineering for the Global Frontier.
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed mb-4 font-normal">
-                PulseCraft Technologies Inc. was established in Toronto, Canada, bringing together visionary software architects, mobile engineers, and product strategists who prioritize performance, security, and intuitive design.
+                PulseCraft Technologies Inc. was established in Oshawa, Ontario, Canada, bringing together visionary software architects, mobile engineers, and product strategists who prioritize performance, security, and intuitive design.
               </p>
               <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
                 We believe that software engineering is a craft. Every line of Kotlin, Swift, TypeScript, or Python we write is measured against strict performance benchmarks and zero-trust security postures.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200 text-xs font-mono text-slate-700">
+              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200 text-xs font-sans font-medium text-slate-700">
                 <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
                   <span className="text-[#FF2A2A] font-bold block text-sm font-display">100%</span>
                   Canadian Governance
@@ -81,7 +81,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-base text-white">Global Perspective</h3>
-                    <p className="text-xs text-slate-400 font-mono">Operating across multiple time zones</p>
+                    <p className="text-xs text-slate-400 font-sans">Operating across multiple time zones</p>
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
@@ -112,7 +112,7 @@ export default function AboutPage() {
                 <div className="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-[#FF2A2A] inline-flex mb-5">
                   <Target className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF2A2A] font-semibold block mb-2">
+                <span className="text-xs font-sans uppercase tracking-wider text-[#FF2A2A] font-semibold block mb-2">
                   Our Mission
                 </span>
                 <h3 className="text-xl font-display font-semibold text-white mb-3">
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 <div className="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-[#FF2A2A] inline-flex mb-5">
                   <Eye className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF2A2A] font-semibold block mb-2">
+                <span className="text-xs font-sans uppercase tracking-wider text-[#FF2A2A] font-semibold block mb-2">
                   Our Vision
                 </span>
                 <h3 className="text-xl font-display font-semibold text-white mb-3">

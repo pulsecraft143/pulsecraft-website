@@ -12,7 +12,7 @@ export const CanadaLocation: React.FC = () => {
           badge="Global Headquarters"
           title="Canadian Innovation."
           titleHighlight="Worldwide Scale."
-          subtitle="Headquartered in Toronto's financial and technology corridor, PulseCraft Technologies Inc. operates under robust Canadian corporate governance while engineering systems for global clients."
+          subtitle="Headquartered in Oshawa, Ontario, PulseCraft Technologies Inc. operates under robust Canadian corporate governance while engineering systems for global clients."
           theme="dark"
           align="center"
         />

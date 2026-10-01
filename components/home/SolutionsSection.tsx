@@ -69,7 +69,7 @@ export const SolutionsSection: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Left: Overview & Key Benefits */}
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-xs font-mono text-brand-red font-semibold mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-xs font-sans text-brand-red font-medium mb-4">
                 <Icon className="w-3.5 h-3.5" />
                 {selectedSolution.tag}
               </div>
@@ -86,7 +86,7 @@ export const SolutionsSection: React.FC = () => {
 
               {/* Benefits Checklist */}
               <div className="mt-6 space-y-2.5">
-                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 font-semibold">
+                <h4 className="text-xs font-sans uppercase tracking-wider text-slate-500 font-semibold">
                   Engineering Value Delivered:
                 </h4>
                 {selectedSolution.keyBenefits.map((benefit) => (
@@ -109,7 +109,7 @@ export const SolutionsSection: React.FC = () => {
 
             {/* Right: Technical Spec Card */}
             <div className="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-inner border border-slate-800">
-              <span className="text-[11px] font-mono text-brand-red uppercase tracking-wider block mb-2 font-semibold">
+              <span className="text-xs font-sans text-brand-red uppercase tracking-wider block mb-2 font-semibold">
                 Architecture Profile
               </span>
               <h4 className="text-lg font-bold font-display text-white mb-2">
@@ -120,14 +120,14 @@ export const SolutionsSection: React.FC = () => {
               </p>
 
               <div className="border-t border-slate-800 pt-5">
-                <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block mb-3">
+                <span className="text-xs font-sans text-slate-400 uppercase tracking-wider block mb-3">
                   Recommended Core Technologies
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {selectedSolution.featuredTech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-lg text-xs font-mono bg-slate-800 text-slate-200 border border-slate-700"
+                      className="px-3 py-1 rounded-lg text-xs font-sans font-medium bg-slate-800 text-slate-200 border border-slate-700"
                     >
                       {tech}
                     </span>
@@ -135,7 +135,7 @@ export const SolutionsSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-6 pt-5 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <div className="mt-6 pt-5 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-sans font-medium">
                 <span>Compliance: PIPEDA / SOC2</span>
                 <span className="text-green-400">● Production Ready</span>
               </div>

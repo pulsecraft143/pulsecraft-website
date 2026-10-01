@@ -208,7 +208,7 @@ export const Logo: React.FC<LogoProps> = ({
       </div>
       {variant !== 'icon' && (
         <span
-          className={`font-mono font-medium tracking-[0.14em] uppercase mt-1 ${currentSize.sub} ${subTextColor}`}
+          className={`font-sans font-medium tracking-[0.14em] uppercase mt-1 ${currentSize.sub} ${subTextColor}`}
         >
           Technologies Inc.
         </span>

@@ -116,7 +116,7 @@ export const ProcessJourneySection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                 >
                   {/* Step Circle Pin */}
                   <div
-                    className={`w-12 h-12 rounded-2xl flex items-center justify-center font-mono font-bold text-xs transition-all duration-300 ${
+                    className={`w-12 h-12 rounded-2xl flex items-center justify-center font-sans font-semibold text-xs transition-all duration-300 ${
                       isActive
                         ? 'bg-brand-red text-white scale-110 shadow-[0_0_25px_rgba(255, 42, 42,0.5)] border-2 border-white/20'
                         : isPast
@@ -157,7 +157,7 @@ export const ProcessJourneySection: React.FC<{ theme?: 'light' | 'dark' }> = ({
               <button
                 key={step.num}
                 onClick={() => setActiveStep(idx)}
-                className={`px-4 py-2 rounded-xl text-xs font-mono font-bold whitespace-nowrap transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs font-sans font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'bg-brand-red text-white shadow-md'
                     : isLight
@@ -192,7 +192,7 @@ export const ProcessJourneySection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold">
+                    <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold">
                       Phase {current.num}
                     </span>
                     <h3
@@ -206,7 +206,7 @@ export const ProcessJourneySection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                 </div>
 
                 <span
-                  className={`text-xs font-mono px-3 py-1.5 rounded-lg border ${
+                  className={`text-xs font-sans font-medium px-3 py-1.5 rounded-lg border ${
                     isLight
                       ? 'bg-white border-slate-200 text-slate-700'
                       : 'bg-zinc-900 border-zinc-800 text-zinc-300'
@@ -234,7 +234,7 @@ export const ProcessJourneySection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                 <button
                   disabled={activeStep === 0}
                   onClick={() => setActiveStep((prev) => Math.max(0, prev - 1))}
-                  className={`text-xs font-mono uppercase tracking-wider px-3.5 py-1.5 rounded-lg transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
+                  className={`text-xs font-sans font-medium px-3.5 py-1.5 rounded-lg transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
                     isLight ? 'hover:bg-slate-200 text-slate-700' : 'hover:bg-zinc-800 text-zinc-400'
                   }`}
                 >
@@ -255,7 +255,7 @@ export const ProcessJourneySection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                 <button
                   disabled={activeStep === JOURNEY_STEPS.length - 1}
                   onClick={() => setActiveStep((prev) => Math.min(JOURNEY_STEPS.length - 1, prev + 1))}
-                  className={`text-xs font-mono uppercase tracking-wider px-3.5 py-1.5 rounded-lg transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
+                  className={`text-xs font-sans font-medium px-3.5 py-1.5 rounded-lg transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
                     isLight ? 'hover:bg-slate-200 text-slate-700' : 'hover:bg-zinc-800 text-zinc-400'
                   }`}
                 >

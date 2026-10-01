@@ -92,7 +92,7 @@ export default function JobDetailPage({
       {/* Breadcrumb & Job Header */}
       <section className="py-16 sm:py-24 border-b border-dark-border relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 mb-6">
+          <div className="flex items-center gap-2 text-xs font-sans font-medium text-zinc-400 mb-6">
             <Link href="/" className="hover:text-zinc-300">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/careers" className="hover:text-zinc-300">Careers</Link>
@@ -101,19 +101,19 @@ export default function JobDetailPage({
           </div>
 
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/30 text-brand-red font-semibold">
+            <span className="px-3 py-1 rounded-full text-xs font-sans font-medium bg-brand-red/10 border border-brand-red/30 text-brand-red">
               {job.department}
             </span>
-            <span className="px-3 py-1 rounded-full text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">
+            <span className="px-3 py-1 rounded-full text-xs font-sans font-medium bg-zinc-900 border border-zinc-800 text-zinc-300">
               {job.employmentType}
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white max-w-4xl tracking-tight leading-[1.15]">
+          <h1 className="text-3xl sm:text-5xl font-display font-semibold text-white max-w-4xl tracking-tight leading-[1.15]">
             {job.title}
           </h1>
 
-          <div className="mt-6 flex flex-wrap items-center gap-6 text-xs sm:text-sm font-mono text-zinc-400">
+          <div className="mt-6 flex flex-wrap items-center gap-6 text-xs sm:text-sm font-sans font-medium text-zinc-400">
             <span className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-brand-red" />
               {job.location}
@@ -182,7 +182,7 @@ export default function JobDetailPage({
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {job.benefits.map((b) => (
-                    <span key={b} className="px-3 py-1.5 rounded-xl text-xs font-mono bg-zinc-900 text-zinc-200 border border-zinc-800">
+                    <span key={b} className="px-3 py-1.5 rounded-xl text-xs font-sans font-medium bg-zinc-900 text-zinc-200 border border-zinc-800">
                       {b}
                     </span>
                   ))}
@@ -193,7 +193,7 @@ export default function JobDetailPage({
             {/* Right Column: Application Form */}
             <div className="lg:col-span-5">
               <div className="sticky top-28 bg-[#14141A] border border-dark-border rounded-3xl p-6 sm:p-8 shadow-2xl">
-                <span className="text-xs font-mono uppercase tracking-wider text-brand-red font-semibold block mb-1">
+                <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-1">
                   Apply for Position
                 </span>
                 <h3 className="text-xl font-display font-bold text-white mb-6">
@@ -235,7 +235,7 @@ export default function JobDetailPage({
                       )}
 
                       <div>
-                        <label className="block text-zinc-400 font-mono uppercase mb-1.5">
+                        <label className="block text-zinc-400 font-sans text-xs uppercase tracking-wider font-semibold mb-1.5">
                           Full Name *
                         </label>
                         <input
@@ -245,13 +245,13 @@ export default function JobDetailPage({
                           value={formData.fullName}
                           onChange={handleChange}
                           placeholder="e.g. Marc Dubois"
-                          className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red"
+                          className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red font-sans"
                         />
                       </div>
 
                       <div className="grid grid-cols-2 gap-3">
                         <div>
-                          <label className="block text-zinc-400 font-mono uppercase mb-1.5">
+                          <label className="block text-zinc-400 font-sans text-xs uppercase tracking-wider font-semibold mb-1.5">
                             Email *
                           </label>
                           <input
@@ -261,11 +261,11 @@ export default function JobDetailPage({
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="marc@dev.ca"
-                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red"
+                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red font-sans"
                           />
                         </div>
                         <div>
-                          <label className="block text-zinc-400 font-mono uppercase mb-1.5">
+                          <label className="block text-zinc-400 font-sans text-xs uppercase tracking-wider font-semibold mb-1.5">
                             Phone *
                           </label>
                           <input
@@ -274,14 +274,14 @@ export default function JobDetailPage({
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            placeholder="+1 (416) 000-0000"
-                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red"
+                            placeholder="+1 (289) 927-7578"
+                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red font-sans"
                           />
                         </div>
                       </div>
 
                       <div>
-                        <label className="block text-zinc-400 font-mono uppercase mb-1.5">
+                        <label className="block text-zinc-400 font-sans text-xs uppercase tracking-wider font-semibold mb-1.5">
                           Your Current Location (City, Country) *
                         </label>
                         <input
@@ -290,14 +290,14 @@ export default function JobDetailPage({
                           name="location"
                           value={formData.location}
                           onChange={handleChange}
-                          placeholder="Toronto, ON / Remote"
-                          className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red"
+                          placeholder="Oshawa, ON / Remote"
+                          className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red font-sans"
                         />
                       </div>
 
                       <div className="grid grid-cols-2 gap-3">
                         <div>
-                          <label className="block text-zinc-400 font-mono uppercase mb-1.5">
+                          <label className="block text-zinc-400 font-sans text-xs uppercase tracking-wider font-semibold mb-1.5">
                             LinkedIn URL
                           </label>
                           <input
@@ -306,11 +306,11 @@ export default function JobDetailPage({
                             value={formData.linkedinUrl}
                             onChange={handleChange}
                             placeholder="linkedin.com/in/username"
-                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red"
+                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red font-sans"
                           />
                         </div>
                         <div>
-                          <label className="block text-zinc-400 font-mono uppercase mb-1.5">
+                          <label className="block text-zinc-400 font-sans text-xs uppercase tracking-wider font-semibold mb-1.5">
                             Portfolio / GitHub
                           </label>
                           <input
@@ -319,19 +319,19 @@ export default function JobDetailPage({
                             value={formData.portfolioUrl}
                             onChange={handleChange}
                             placeholder="github.com/username"
-                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red"
+                            className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red font-sans"
                           />
                         </div>
                       </div>
 
                       {/* Resume Upload / Attach */}
                       <div>
-                        <label className="block text-zinc-400 font-mono uppercase mb-1.5">
+                        <label className="block text-zinc-400 font-sans text-xs uppercase tracking-wider font-semibold mb-1.5">
                           Resume / CV (PDF or DOCX)
                         </label>
                         <label className="flex items-center justify-center gap-2 p-3 rounded-xl border border-dashed border-zinc-700 hover:border-brand-red bg-zinc-900/50 cursor-pointer text-zinc-400 hover:text-white transition-colors">
                           <Upload className="w-4 h-4 text-brand-red" />
-                          <span className="text-xs truncate">
+                          <span className="text-xs truncate font-sans">
                             {formData.resumeFileName || 'Upload or drag resume file'}
                           </span>
                           <input
@@ -344,7 +344,7 @@ export default function JobDetailPage({
                       </div>
 
                       <div>
-                        <label className="block text-zinc-400 font-mono uppercase mb-1.5">
+                        <label className="block text-zinc-400 font-sans text-xs uppercase tracking-wider font-semibold mb-1.5">
                           Cover Note / Why PulseCraft?
                         </label>
                         <textarea
@@ -353,7 +353,7 @@ export default function JobDetailPage({
                           value={formData.message}
                           onChange={handleChange}
                           placeholder="Tell us about a technical challenge you recently conquered..."
-                          className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red"
+                          className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-brand-red font-sans"
                         />
                       </div>
 

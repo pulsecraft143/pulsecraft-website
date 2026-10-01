@@ -11,11 +11,9 @@ A world-class, premium, modern, fully responsive corporate technology company we
 ## 🏛️ Company Information & Canadian Jurisdiction
 
 - **Company Name:** PULSECRAFT TECHNOLOGIES INC.
-- **Corporate Headquarters:** 100 King Street West, Suite 5600, Toronto, ON M5X 1C9, Canada
-- **General Inquiries:** `hello@pulsecrafttechnologies.com`
-- **Project Proposals:** `projects@pulsecrafttechnologies.com`
-- **Careers:** `careers@pulsecrafttechnologies.com`
-- **Corporate Line:** `+1 (416) 800-7852`
+- **Corporate Headquarters:** 149 Giboulee Path, Oshawa, ON L1L 0M7, Canada
+- **Support & Inquiries:** `support@pulsecrafttechnologies.com`
+- **Corporate Line:** `+12899277578`
 - **Governance:** Operating under Canadian corporate governance and PIPEDA / GDPR compliance.
 
 ---
@@ -115,10 +113,10 @@ npm start
 ## 🇨🇦 Canadian Headquarters
 
 **PULSECRAFT TECHNOLOGIES INC.**  
-100 King Street West, Suite 5600  
-Toronto, ON M5X 1C9, Canada  
-*Email:* hello@pulsecrafttechnologies.com  
-*Phone:* +1 (416) 800-7852  
+149 Giboulee Path  
+Oshawa, ON L1L 0M7, Canada  
+*Email:* support@pulsecrafttechnologies.com  
+*Phone:* +12899277578  
 
 ---
 

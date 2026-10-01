@@ -29,7 +29,8 @@ export const metadata: Metadata = {
     'Next.js Enterprise Web Platforms',
     'Artificial Intelligence & RAG Pipelines',
     'Distributed Cloud Architecture',
-    'Toronto Technology Company',
+    'Oshawa Technology Company',
+    'Ontario Technology Company',
   ],
   authors: [{ name: 'PulseCraft Technologies Inc.', url: SITE_CONFIG.url }],
   creator: 'PulseCraft Technologies Inc.',
@@ -73,6 +74,21 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
   alternates: {
     canonical: SITE_CONFIG.url,
   },
@@ -83,19 +99,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
+  const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE_CONFIG.legalName,
     alternateName: SITE_CONFIG.name,
     url: SITE_CONFIG.url,
-    logo: `${SITE_CONFIG.url}/logo.svg`,
+    logo: `${SITE_CONFIG.url}/favicon-512x512.png`,
+    image: `${SITE_CONFIG.url}/og-image.jpg`,
+    description: SITE_CONFIG.description,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '100 King Street West, Suite 5600',
-      addressLocality: 'Toronto',
-      addressRegion: 'ON',
-      postalCode: 'M5X 1C9',
+      streetAddress: '149 Giboulee Path',
+      addressLocality: 'Oshawa',
+      addressRegion: 'Ontario',
+      postalCode: 'L1L 0M7',
       addressCountry: 'CA',
     },
     geo: {
@@ -118,13 +136,39 @@ export default function RootLayout({
     ],
   };
 
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'PulseCraft Technologies Inc.',
+    alternateName: 'PulseCraft',
+    url: SITE_CONFIG.url,
+    description: SITE_CONFIG.description,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_CONFIG.legalName,
+      logo: `${SITE_CONFIG.url}/favicon-512x512.png`,
+    },
+  };
+
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#0B0B0D" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body className="min-h-screen flex flex-col bg-dark-void text-white selection:bg-brand-red selection:text-white">

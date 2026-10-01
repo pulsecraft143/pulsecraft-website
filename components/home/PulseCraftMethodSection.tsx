@@ -98,18 +98,18 @@ export const PulseCraftMethodSection: React.FC<{ theme?: 'dark' | 'light' }> = (
         />
 
         {/* Visual Concept Metaphor Chain */}
-        <div className="mt-2 mb-10 flex items-center justify-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-mono text-zinc-500 overflow-x-auto pb-2 select-none">
-          <span>IDEA</span>
+        <div className="mt-2 mb-10 flex items-center justify-center gap-2 sm:gap-4 text-xs font-sans font-medium text-zinc-400 overflow-x-auto pb-2 select-none">
+          <span>Idea</span>
           <span className="text-brand-red">→</span>
-          <span>INTELLIGENCE</span>
+          <span>Intelligence</span>
           <span className="text-brand-red">→</span>
-          <span>DESIGN</span>
+          <span>Design</span>
           <span className="text-brand-red">→</span>
-          <span>ENGINEERING</span>
+          <span>Engineering</span>
           <span className="text-brand-red">→</span>
-          <span>PRODUCT</span>
+          <span>Product</span>
           <span className="text-brand-red">→</span>
-          <span className="text-white font-bold">EVOLUTION</span>
+          <span className="text-white font-semibold">Evolution</span>
         </div>
 
         {/* Desktop Single Horizontal Line Stepper */}
@@ -141,7 +141,7 @@ export const PulseCraftMethodSection: React.FC<{ theme?: 'dark' | 'light' }> = (
                   className="group flex flex-col items-center text-center focus:outline-none py-2"
                 >
                   <div
-                    className={`w-11 h-11 rounded-xl flex items-center justify-center font-mono font-bold text-xs transition-all duration-250 ${
+                    className={`w-11 h-11 rounded-xl flex items-center justify-center font-sans font-semibold text-xs transition-all duration-250 ${
                       isActive
                         ? 'bg-brand-red text-white scale-110 shadow-[0_0_20px_rgba(255, 42, 42,0.5)] border border-white/20'
                         : isLight
@@ -152,7 +152,7 @@ export const PulseCraftMethodSection: React.FC<{ theme?: 'dark' | 'light' }> = (
                     <StageIcon className="w-5 h-5" />
                   </div>
 
-                  <span className="mt-3 text-[10px] font-mono text-zinc-500">
+                  <span className="mt-3 text-xs font-sans font-medium text-zinc-400">
                     {stage.num}
                   </span>
                   <span
@@ -180,7 +180,7 @@ export const PulseCraftMethodSection: React.FC<{ theme?: 'dark' | 'light' }> = (
               <button
                 key={stage.num}
                 onClick={() => setActiveStage(idx)}
-                className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold whitespace-nowrap transition-all ${
+                className={`px-3.5 py-2 rounded-xl text-xs font-sans font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'bg-brand-red text-white shadow-md'
                     : isLight
@@ -215,8 +215,8 @@ export const PulseCraftMethodSection: React.FC<{ theme?: 'dark' | 'light' }> = (
                     <Icon className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-brand-red font-semibold">
-                      Phase {current.num} // {current.concept}
+                    <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold">
+                      Phase {current.num} · {current.concept}
                     </span>
                     <h3
                       className={`text-xl sm:text-2xl font-display font-bold tracking-tight ${
@@ -229,7 +229,7 @@ export const PulseCraftMethodSection: React.FC<{ theme?: 'dark' | 'light' }> = (
                 </div>
 
                 <span
-                  className={`text-xs font-mono px-3 py-1 rounded-lg border ${
+                  className={`text-xs font-sans font-medium px-3 py-1 rounded-lg border ${
                     isLight
                       ? 'bg-white border-slate-200 text-slate-700'
                       : 'bg-zinc-900 border-zinc-800 text-zinc-300'
@@ -257,7 +257,7 @@ export const PulseCraftMethodSection: React.FC<{ theme?: 'dark' | 'light' }> = (
                 <button
                   disabled={activeStage === 0}
                   onClick={() => setActiveStage((prev) => Math.max(0, prev - 1))}
-                  className={`text-xs font-mono uppercase tracking-wider px-3 py-1.5 rounded-lg transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
+                  className={`text-xs font-sans font-medium px-3.5 py-1.5 rounded-lg transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
                     isLight ? 'hover:bg-slate-200 text-slate-700' : 'hover:bg-zinc-800 text-zinc-400'
                   }`}
                 >
@@ -278,7 +278,7 @@ export const PulseCraftMethodSection: React.FC<{ theme?: 'dark' | 'light' }> = (
                 <button
                   disabled={activeStage === METHOD_STAGES.length - 1}
                   onClick={() => setActiveStage((prev) => Math.min(METHOD_STAGES.length - 1, prev + 1))}
-                  className={`text-xs font-mono uppercase tracking-wider px-3 py-1.5 rounded-lg transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
+                  className={`text-xs font-sans font-medium px-3.5 py-1.5 rounded-lg transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
                     isLight ? 'hover:bg-slate-200 text-slate-700' : 'hover:bg-zinc-800 text-zinc-400'
                   }`}
                 >

@@ -37,7 +37,7 @@ const BENEFIT_ICONS: Record<string, React.ElementType> = {
 const FAQS = [
   {
     q: 'Can I work remotely from outside of Canada?',
-    a: 'Yes. While our headquarters and leadership are in Toronto, Ontario, Canada, we offer fully remote arrangements for top engineering talent across compatible time zones.',
+    a: 'Yes. While our headquarters and leadership are in Oshawa, Ontario, Canada, we offer fully remote arrangements for top engineering talent across compatible time zones.',
   },
   {
     q: 'What is the interview and evaluation process?',
@@ -59,7 +59,7 @@ export default function CareersPage() {
       {/* Hero */}
       <section className="py-16 sm:py-24 border-b border-dark-border relative overflow-hidden text-center">
         <div className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
+          <span className="px-3 py-1 rounded-full text-xs font-sans bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
             Join Our Global Engineering Team
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-display font-semibold tracking-tight text-[#FFFFFF] max-w-3xl mx-auto leading-[1.18] sm:leading-[1.22]">
@@ -136,10 +136,10 @@ export default function CareersPage() {
               >
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-brand-red/10 border border-brand-red/30 text-[#FF2A2A] font-medium">
+                    <span className="px-2 py-0.5 rounded text-xs font-sans bg-brand-red/10 border border-brand-red/30 text-[#FF2A2A] font-medium">
                       {job.department}
                     </span>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-zinc-900 border border-zinc-800 text-zinc-400">
+                    <span className="px-2 py-0.5 rounded text-xs font-sans bg-zinc-900 border border-zinc-800 text-zinc-400">
                       {job.employmentType}
                     </span>
                   </div>
@@ -148,7 +148,7 @@ export default function CareersPage() {
                     {job.title}
                   </h3>
 
-                  <div className="mt-1.5 flex flex-wrap items-center gap-3.5 text-xs font-mono text-zinc-400">
+                  <div className="mt-1.5 flex flex-wrap items-center gap-3.5 text-xs font-sans font-medium text-zinc-400">
                     <span className="flex items-center gap-1">
                       <MapPin className="w-3 h-3 text-[#FF2A2A]" />
                       {job.location}

@@ -7,23 +7,23 @@ import { motion, useInView } from 'framer-motion';
 
 const ETHOS_ITEMS = [
   {
-    tag: '01. IDEA',
-    title: 'BUILD BOLD',
+    tag: 'Strategic Vision',
+    title: 'Build Bold',
     concept: 'Human Ambition',
     desc: 'Challenge conventional paradigms and engineer software with audacious market impact.',
     icon: Sparkles,
   },
   {
-    tag: '02. INTELLIGENCE',
-    title: 'THINK DEEP',
-    concept: 'Cognitive Systems',
+    tag: 'Cognitive Architecture',
+    title: 'Think Deep',
+    concept: 'Contextual Intelligence',
     desc: 'Architect resilient distributed logic with contextual AI models and mathematical precision.',
     icon: Brain,
   },
   {
-    tag: '03. CRAFT',
-    title: 'CRAFT BETTER',
-    concept: 'Engineering Rigor',
+    tag: 'Engineering Rigor',
+    title: 'Craft Better',
+    concept: 'Production Polish',
     desc: 'Execute with 60fps native performance, pixel-perfect design polish, and zero technical debt.',
     icon: Code2,
   },
@@ -98,7 +98,7 @@ export const EthosSection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF2A2A] font-semibold">
+                      <span className="text-xs font-sans font-semibold tracking-wider uppercase text-[#FF2A2A]">
                         {item.tag}
                       </span>
                       <div
@@ -115,14 +115,14 @@ export const EthosSection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                     </div>
 
                     <h3
-                      className={`text-xl font-display font-semibold tracking-tight mb-1 ${
+                      className={`text-2xl font-display font-semibold tracking-tight mb-1 ${
                         isLight ? 'text-slate-900' : 'text-white'
                       }`}
                     >
                       {item.title}
                     </h3>
 
-                    <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-wider block mb-2.5">
+                    <span className="text-xs font-sans text-zinc-400 font-medium block mb-3">
                       {item.concept}
                     </span>
 
@@ -135,7 +135,7 @@ export const EthosSection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-3.5 border-t border-zinc-800/30 flex items-center justify-between text-[11px] font-mono text-zinc-500">
+                  <div className="mt-5 pt-3.5 border-t border-zinc-800/30 flex items-center justify-between text-xs font-sans text-zinc-400 font-medium">
                     <span>PulseCraft Rigor</span>
                     <span className={isActive ? 'text-[#FF2A2A] font-semibold' : ''}>
                       →

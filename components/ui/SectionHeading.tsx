@@ -38,7 +38,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         <div className="inline-flex items-center gap-1.5 mb-3.5">
           <span
             className={cn(
-              'px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium tracking-wider uppercase border',
+              'px-3 py-1 rounded-full text-xs font-sans font-semibold tracking-wide uppercase border',
               isLight
                 ? 'bg-slate-100 text-slate-700 border-slate-200'
                 : 'bg-brand-red/10 text-[#FF2A2A] border-brand-red/25'

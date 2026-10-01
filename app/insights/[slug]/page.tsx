@@ -53,7 +53,7 @@ export default function ArticleDetailPage({
       {/* Header */}
       <section className="py-16 sm:py-24 border-b border-dark-border relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 mb-6">
+          <div className="flex items-center gap-2 text-xs font-sans font-medium text-zinc-400 mb-6">
             <Link href="/" className="hover:text-zinc-300">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/insights" className="hover:text-zinc-300">Insights</Link>
@@ -61,11 +61,11 @@ export default function ArticleDetailPage({
             <span className="text-brand-red font-medium">{article.category}</span>
           </div>
 
-          <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/30 text-brand-red font-semibold mb-4 inline-block">
+          <span className="px-3 py-1 rounded-full text-xs font-sans font-medium bg-brand-red/10 border border-brand-red/30 text-brand-red mb-4 inline-block">
             {article.category}
           </span>
 
-          <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-3xl sm:text-5xl font-display font-semibold text-white tracking-tight leading-[1.15]">
             {article.title}
           </h1>
 
@@ -84,13 +84,13 @@ export default function ArticleDetailPage({
                 <span className="block text-sm font-semibold text-white">
                   {article.author.name}
                 </span>
-                <span className="block text-xs font-mono text-zinc-400">
+                <span className="block text-xs font-sans text-zinc-400">
                   {article.author.role} • PulseCraft
                 </span>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 text-xs font-mono text-zinc-400">
+            <div className="flex items-center gap-4 text-xs font-sans font-medium text-zinc-400">
               <span className="flex items-center gap-1">
                 <Calendar className="w-3.5 h-3.5 text-brand-red" />
                 {article.publishedAt}
@@ -131,14 +131,14 @@ export default function ArticleDetailPage({
         <div className="pt-8 border-t border-zinc-800 flex flex-wrap items-center justify-between gap-4">
           <div className="flex flex-wrap gap-2">
             {article.tags.map((t) => (
-              <span key={t} className="px-3 py-1 rounded-lg text-xs font-mono bg-zinc-900 text-zinc-300 border border-zinc-800">
+              <span key={t} className="px-3 py-1 rounded-lg text-xs font-sans font-medium bg-zinc-900 text-zinc-300 border border-zinc-800">
                 #{t}
               </span>
             ))}
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="text-xs font-mono text-zinc-500">Share Essay:</span>
+            <span className="text-xs font-sans text-zinc-400">Share Essay:</span>
             <button className="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-brand-red transition-colors">
               <Twitter className="w-4 h-4" />
             </button>
@@ -162,14 +162,14 @@ export default function ArticleDetailPage({
               className="p-6 rounded-2xl bg-[#121217] border border-dark-border hover:border-zinc-700 transition-all flex flex-col justify-between group"
             >
               <div>
-                <span className="text-[11px] font-mono text-brand-red block mb-1">
+                <span className="text-xs font-sans font-medium text-brand-red block mb-1">
                   {rel.category}
                 </span>
                 <h4 className="text-base font-display font-bold text-white group-hover:text-red-400 transition-colors">
                   {rel.title}
                 </h4>
               </div>
-              <span className="mt-4 text-xs font-mono text-zinc-500 inline-flex items-center gap-1 group-hover:text-zinc-300">
+              <span className="mt-4 text-xs font-sans font-medium text-zinc-400 inline-flex items-center gap-1 group-hover:text-zinc-300">
                 Read Article →
               </span>
             </Link>

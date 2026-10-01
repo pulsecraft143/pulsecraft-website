@@ -51,15 +51,15 @@ export default function AdminDashboardPage() {
         {/* Admin Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-dark-border">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/30 text-xs font-mono text-brand-red font-semibold mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/30 text-xs font-sans text-brand-red font-semibold mb-3">
               <ShieldCheck className="w-3.5 h-3.5" />
-              PULSECRAFT CMS & INQUIRY CONSOLE
+              PulseCraft Console
             </div>
             <h1 className="text-3xl sm:text-4xl font-display font-bold text-white">
-              Admin Submissions Dashboard
+              Submissions Dashboard
             </h1>
             <p className="mt-1 text-sm text-zinc-400">
-              Live review of incoming project leads, career applications, and newsletter subscriptions.
+              Review incoming client inquiries, job candidates, and subscribers.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export default function AdminDashboardPage() {
             }`}
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-mono text-zinc-500 uppercase">Project Inquiries</span>
+              <span className="text-xs font-sans font-medium text-zinc-400 uppercase tracking-wider">Project Inquiries</span>
               <Mail className="w-4 h-4 text-brand-red" />
             </div>
             <span className="text-3xl font-bold font-display text-white">{contacts.length}</span>
@@ -103,7 +103,7 @@ export default function AdminDashboardPage() {
             }`}
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-mono text-zinc-500 uppercase">Job Applications</span>
+              <span className="text-xs font-sans font-medium text-zinc-400 uppercase tracking-wider">Job Applications</span>
               <Briefcase className="w-4 h-4 text-brand-red" />
             </div>
             <span className="text-3xl font-bold font-display text-white">{applications.length}</span>
@@ -119,7 +119,7 @@ export default function AdminDashboardPage() {
             }`}
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-mono text-zinc-500 uppercase">Subscribers</span>
+              <span className="text-xs font-sans font-medium text-zinc-400 uppercase tracking-wider">Subscribers</span>
               <Users className="w-4 h-4 text-brand-red" />
             </div>
             <span className="text-3xl font-bold font-display text-white">{subscribers.length}</span>
@@ -136,8 +136,8 @@ export default function AdminDashboardPage() {
               {activeTab === 'applications' && 'Career Candidates & Resumes'}
               {activeTab === 'subscribers' && 'Newsletter Mailing List'}
             </h2>
-            <span className="text-xs font-mono text-zinc-500">
-              Storage: Local Persistent Database (JSON / SQLite)
+            <span className="text-xs font-sans text-zinc-400 font-medium">
+              Persistent Storage Active
             </span>
           </div>
 
@@ -153,30 +153,30 @@ export default function AdminDashboardPage() {
                     <div className="flex items-center gap-3">
                       <span className="text-base font-bold text-white font-display">{req.name}</span>
                       {req.company && (
-                        <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">
+                        <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-sans font-medium">
                           {req.company}
                         </span>
                       )}
-                      <span className="px-2 py-0.5 rounded bg-brand-red/10 text-brand-red font-mono font-semibold">
+                      <span className="px-2 py-0.5 rounded bg-brand-red/10 text-brand-red font-sans font-semibold">
                         {req.projectType}
                       </span>
                     </div>
-                    <span className="font-mono text-zinc-500">{new Date(req.submittedAt).toLocaleString()}</span>
+                    <span className="font-sans text-zinc-400 font-medium">{new Date(req.submittedAt).toLocaleString()}</span>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3 text-zinc-400 font-mono">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3 text-zinc-400 font-sans">
                     <div>Email: <a href={`mailto:${req.email}`} className="text-white underline">{req.email}</a></div>
                     <div>Phone: <span className="text-zinc-200">{req.phone || 'N/A'}</span></div>
-                    <div>Budget: <span className="text-brand-red font-bold">{req.budgetRange}</span></div>
+                    <div>Budget: <span className="text-brand-red font-bold font-display">{req.budgetRange}</span></div>
                   </div>
 
                   <div className="p-3 rounded-xl bg-zinc-950 text-zinc-300 font-sans leading-relaxed">
-                    <strong className="text-zinc-400 font-mono text-[11px] block mb-1">PROJECT DETAILS:</strong>
+                    <strong className="text-zinc-400 font-sans text-xs uppercase tracking-wider block mb-1">Project Details:</strong>
                     {req.details}
                   </div>
                 </div>
               ))}
-              {contacts.length === 0 && <p className="text-zinc-500 py-8 text-center font-mono">No contact submissions yet.</p>}
+              {contacts.length === 0 && <p className="text-zinc-500 py-8 text-center font-sans">No contact submissions yet.</p>}
             </div>
           )}
 
@@ -191,20 +191,20 @@ export default function AdminDashboardPage() {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 mb-3 border-b border-zinc-800">
                     <div className="flex items-center gap-3">
                       <span className="text-base font-bold text-white font-display">{app.fullName}</span>
-                      <span className="px-2.5 py-0.5 rounded bg-brand-red/10 text-brand-red font-mono font-semibold">
+                      <span className="px-2.5 py-0.5 rounded bg-brand-red/10 text-brand-red font-sans font-semibold">
                         {app.positionTitle}
                       </span>
                     </div>
-                    <span className="font-mono text-zinc-500">{new Date(app.submittedAt).toLocaleString()}</span>
+                    <span className="font-sans text-zinc-400 font-medium">{new Date(app.submittedAt).toLocaleString()}</span>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3 text-zinc-400 font-mono">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3 text-zinc-400 font-sans">
                     <div>Email: <a href={`mailto:${app.email}`} className="text-white underline">{app.email}</a></div>
                     <div>Phone: <span className="text-zinc-200">{app.phone}</span></div>
                     <div>Location: <span className="text-zinc-200">{app.location}</span></div>
                   </div>
 
-                  <div className="flex flex-wrap gap-4 mb-3 text-xs font-mono">
+                  <div className="flex flex-wrap gap-4 mb-3 text-xs font-sans font-medium">
                     {app.linkedinUrl && (
                       <a href={app.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
                         ↗ LinkedIn Profile
@@ -224,33 +224,33 @@ export default function AdminDashboardPage() {
 
                   {app.message && (
                     <div className="p-3 rounded-xl bg-zinc-950 text-zinc-300 font-sans leading-relaxed">
-                      <strong className="text-zinc-400 font-mono text-[11px] block mb-1">CANDIDATE NOTE:</strong>
+                      <strong className="text-zinc-400 font-sans text-xs uppercase tracking-wider block mb-1">Candidate Note:</strong>
                       {app.message}
                     </div>
                   )}
                 </div>
               ))}
-              {applications.length === 0 && <p className="text-zinc-500 py-8 text-center font-mono">No job applications yet.</p>}
+              {applications.length === 0 && <p className="text-zinc-500 py-8 text-center font-sans">No job applications yet.</p>}
             </div>
           )}
 
           {/* SUBSCRIBERS TAB */}
           {activeTab === 'subscribers' && (
             <div className="space-y-2">
-              <div className="grid grid-cols-2 p-3 bg-zinc-950 text-xs font-mono text-zinc-500 rounded-xl">
-                <span>SUBSCRIBER EMAIL</span>
-                <span className="text-right">DATE SUBSCRIBED</span>
+              <div className="grid grid-cols-2 p-3 bg-zinc-950 text-xs font-sans text-zinc-400 font-medium uppercase tracking-wider rounded-xl">
+                <span>Subscriber Email</span>
+                <span className="text-right">Date Subscribed</span>
               </div>
               {subscribers.map((sub) => (
                 <div
                   key={sub.id}
-                  className="grid grid-cols-2 p-3.5 bg-zinc-900/60 rounded-xl text-xs font-mono border border-zinc-800"
+                  className="grid grid-cols-2 p-3.5 bg-zinc-900/60 rounded-xl text-xs font-sans border border-zinc-800"
                 >
                   <span className="text-white font-medium">{sub.email}</span>
-                  <span className="text-zinc-400 text-right">{new Date(sub.subscribedAt).toLocaleString()}</span>
+                  <span className="text-zinc-400 text-right font-medium">{new Date(sub.subscribedAt).toLocaleString()}</span>
                 </div>
               ))}
-              {subscribers.length === 0 && <p className="text-zinc-500 py-8 text-center font-mono">No subscribers yet.</p>}
+              {subscribers.length === 0 && <p className="text-zinc-500 py-8 text-center font-sans">No subscribers yet.</p>}
             </div>
           )}
         </div>

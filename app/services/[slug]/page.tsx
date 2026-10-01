@@ -65,7 +65,7 @@ export default function ServiceDetailPage({
       {/* Breadcrumb & Hero */}
       <section className="py-16 sm:py-24 border-b border-dark-border relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 mb-6">
+          <div className="flex items-center gap-2 text-xs font-sans font-medium text-zinc-400 mb-6">
             <Link href="/" className="hover:text-zinc-300">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/services" className="hover:text-zinc-300">Services</Link>
@@ -77,15 +77,15 @@ export default function ServiceDetailPage({
             <div className="p-3.5 rounded-2xl bg-zinc-900 border border-zinc-800 text-brand-red">
               <Icon className="w-8 h-8" />
             </div>
-            <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/30 text-brand-red font-semibold">
+            <span className="px-3 py-1 rounded-full text-xs font-sans font-medium bg-brand-red/10 border border-brand-red/30 text-brand-red">
               PulseCraft Core Capability
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-display font-extrabold text-white max-w-4xl tracking-tight leading-[1.1]">
+          <h1 className="text-4xl sm:text-6xl font-display font-semibold text-white max-w-4xl tracking-tight leading-[1.1]">
             {service.title}
           </h1>
-          <p className="mt-4 text-lg sm:text-xl font-mono text-zinc-400 max-w-3xl">
+          <p className="mt-4 text-lg sm:text-xl font-sans text-zinc-300 max-w-3xl leading-relaxed">
             {service.tagline}
           </p>
         </div>
@@ -142,7 +142,7 @@ export default function ServiceDetailPage({
               <div className="sticky top-28 space-y-6">
                 {/* Tech Stack Card */}
                 <div className="p-6 rounded-3xl bg-[#14141A] border border-dark-border">
-                  <h4 className="text-sm font-mono uppercase tracking-wider text-zinc-400 mb-4">
+                  <h4 className="text-xs font-sans uppercase tracking-wider text-zinc-400 font-semibold mb-4">
                     Core Technologies
                   </h4>
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -161,7 +161,7 @@ export default function ServiceDetailPage({
                 </div>
 
                 {/* Canadian Standards Card */}
-                <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800 text-xs font-mono text-zinc-400 space-y-2.5">
+                <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800 text-xs font-sans text-zinc-400 space-y-2.5">
                   <div className="flex items-center gap-2 text-white font-semibold">
                     <ShieldCheck className="w-4 h-4 text-brand-red" />
                     <span>Canadian Security & PIPEDA Compliance</span>

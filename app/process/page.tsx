@@ -36,7 +36,7 @@ export default function ProcessPage() {
       {/* Hero */}
       <section className="py-16 sm:py-24 border-b border-dark-border relative overflow-hidden text-center">
         <div className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
+          <span className="px-3 py-1 rounded-full text-xs font-sans bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
             Engineering Methodology
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-display font-semibold tracking-tight text-[#FFFFFF] max-w-3xl mx-auto leading-[1.18] sm:leading-[1.22]">
@@ -67,7 +67,7 @@ export default function ProcessPage() {
                     <div className="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-[#FF2A2A]">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase">
+                    <span className="px-2.5 py-0.5 rounded-full text-xs font-sans bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase">
                       {step.phase}
                     </span>
                   </div>
@@ -80,7 +80,7 @@ export default function ProcessPage() {
                   </p>
 
                   <div className="space-y-2">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 font-semibold block mb-1">
+                    <span className="text-xs font-sans uppercase tracking-wider text-zinc-400 font-semibold block mb-1">
                       Core Sprint Activities
                     </span>
                     {step.activities.map((act) => (
@@ -93,19 +93,19 @@ export default function ProcessPage() {
                 </div>
 
                 <div className="lg:col-span-5 bg-zinc-950 p-5 sm:p-6 rounded-xl border border-zinc-800 relative z-10">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-[#FF2A2A] block mb-2.5 font-semibold">
+                  <span className="text-xs font-sans uppercase tracking-wider text-[#FF2A2A] block mb-2.5 font-semibold">
                     Verified Deliverables
                   </span>
                   <div className="space-y-2">
                     {step.deliverables.map((del) => (
-                      <div key={del} className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-200 flex items-center gap-2">
+                      <div key={del} className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 text-xs font-sans font-medium text-zinc-200 flex items-center gap-2">
                         <FileCode className="w-3.5 h-3.5 text-[#FF2A2A] shrink-0" />
                         <span>{del}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="mt-5 pt-3.5 border-t border-zinc-800 flex items-center justify-between text-xs font-mono text-zinc-500">
+                  <div className="mt-5 pt-3.5 border-t border-zinc-800 flex items-center justify-between text-xs font-sans font-medium text-zinc-400">
                     <span>Quality Gate: Passed</span>
                     <span className="text-emerald-400">● Verified</span>
                   </div>

@@ -206,29 +206,29 @@ export const PulseIntelligenceVisual: React.FC = () => {
         className="w-full h-full block"
       />
 
-      {/* Floating Precision Mathematical Geometry Badges */}
-      <div className="absolute top-6 left-6 px-3 py-1.5 rounded-lg bg-zinc-950/80 border border-zinc-800 text-[10px] font-mono text-zinc-400 backdrop-blur-md">
+      {/* Floating System Badges */}
+      <div className="absolute top-6 left-6 px-3.5 py-1.5 rounded-full bg-zinc-950/85 border border-zinc-800 text-xs font-sans font-medium text-zinc-300 backdrop-blur-md shadow-sm">
         <span className="text-brand-red mr-1.5 font-bold">●</span>
-        <span>INTELLIGENCE MATRIX</span>
+        <span>Intelligence Architecture</span>
       </div>
 
-      <div className="absolute bottom-6 right-6 px-3 py-1.5 rounded-lg bg-zinc-950/80 border border-zinc-800 text-[10px] font-mono text-zinc-400 backdrop-blur-md">
-        <span>PRECISION: 99.99%</span>
+      <div className="absolute bottom-6 right-6 px-3.5 py-1.5 rounded-full bg-zinc-950/85 border border-zinc-800 text-xs font-sans font-medium text-zinc-300 backdrop-blur-md shadow-sm">
+        <span>99.99% Enterprise Uptime</span>
       </div>
 
       {/* Narrative Concept Points */}
-      <div className="absolute top-1/2 -left-2 sm:left-4 -translate-y-1/2 flex flex-col gap-6 text-[10px] font-mono text-zinc-400">
+      <div className="absolute top-1/2 -left-2 sm:left-4 -translate-y-1/2 flex flex-col gap-6 text-xs font-sans font-medium text-zinc-400">
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-zinc-600" />
-          <span className="tracking-widest">IDEAS</span>
+          <span className="tracking-wide">Ideas</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-red" />
-          <span className="text-white font-semibold tracking-widest">INTELLIGENCE</span>
+          <span className="text-white font-semibold tracking-wide">Intelligence</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-zinc-600" />
-          <span className="tracking-widest">IMPACT</span>
+          <span className="tracking-wide">Impact</span>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ export const FinalCTA: React.FC = () => {
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
       >
-        <span className="px-3.5 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold mb-6 inline-block">
+        <span className="px-3.5 py-1 rounded-full text-xs font-sans uppercase tracking-wider bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold mb-6 inline-block">
           <span className="w-1.5 h-1.5 rounded-full bg-[#FF2A2A] inline-block mr-1.5" />
           Ready to Build
         </span>
@@ -56,7 +56,7 @@ export const FinalCTA: React.FC = () => {
           </Button>
         </div>
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-zinc-500">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs font-sans font-medium text-zinc-400">
           <span>🇨🇦 Canadian Headquartered</span>
           <span>•</span>
           <span>Global Delivery</span>

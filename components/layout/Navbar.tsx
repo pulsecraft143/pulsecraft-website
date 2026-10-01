@@ -138,7 +138,7 @@ export const Navbar: React.FC = () => {
             className="fixed inset-0 z-30 bg-dark-void/98 backdrop-blur-2xl flex flex-col pt-24 pb-8 px-6 overflow-y-auto lg:hidden"
           >
             <div className="flex flex-col gap-3 my-auto">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 mb-1">
+              <span className="text-xs font-sans uppercase tracking-wider text-zinc-400 mb-1">
                 Navigation
               </span>
               {MAIN_NAV_ITEMS.map((item) => {
@@ -176,7 +176,7 @@ export const Navbar: React.FC = () => {
               >
                 Get in Touch
               </Button>
-              <div className="flex items-center justify-center gap-2 text-xs font-mono text-zinc-500">
+              <div className="flex items-center justify-center gap-2 text-xs font-sans text-zinc-400">
                 <span role="img" aria-label="Canada">🇨🇦</span>
                 <span>PULSECRAFT TECHNOLOGIES INC.</span>
               </div>

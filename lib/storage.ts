@@ -45,7 +45,7 @@ const defaultStore: DatabaseStore = {
       fullName: 'Alexandre Roy',
       email: 'alex.roy.dev@gmail.com',
       phone: '+1 (647) 555-4921',
-      location: 'Toronto, ON (Hybrid)',
+      location: 'Oshawa, ON (Hybrid)',
       positionId: 'senior-fullstack-engineer',
       positionTitle: 'Senior Full-Stack Engineer (Next.js & Node.js)',
       linkedinUrl: 'https://linkedin.com/in/alexandreroy',

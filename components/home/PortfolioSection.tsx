@@ -70,10 +70,10 @@ export const PortfolioSection: React.FC = () => {
 
                 {/* Top Category Badge */}
                 <div className="absolute top-4 left-4 flex items-center gap-2">
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-black/70 backdrop-blur-md text-white border border-zinc-700">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-sans bg-black/70 backdrop-blur-md text-white border border-zinc-700 font-medium">
                     {project.category}
                   </span>
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-brand-red/90 text-white font-bold">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-sans bg-brand-red/90 text-white font-semibold">
                     {project.industry}
                   </span>
                 </div>
@@ -93,7 +93,7 @@ export const PortfolioSection: React.FC = () => {
                   {project.results?.[0] && (
                     <div className="mt-4 p-2.5 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-between">
                       <span className="text-xs text-zinc-400">Impact Result:</span>
-                      <span className="text-xs font-mono font-bold text-brand-red">
+                      <span className="text-xs font-sans font-semibold text-brand-red">
                         {project.results[0].metric} — {project.results[0].label}
                       </span>
                     </div>
@@ -162,22 +162,22 @@ export const PortfolioSection: React.FC = () => {
               />
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-mono">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-sans">
               <div>
-                <span className="text-zinc-500 block">CLIENT</span>
-                <span className="text-white font-bold">{activeModalProject.client}</span>
+                <span className="text-zinc-500 block uppercase tracking-wider text-[11px] mb-1">Client</span>
+                <span className="text-white font-semibold">{activeModalProject.client}</span>
               </div>
               <div>
-                <span className="text-zinc-500 block">CATEGORY</span>
-                <span className="text-white font-bold">{activeModalProject.category}</span>
+                <span className="text-zinc-500 block uppercase tracking-wider text-[11px] mb-1">Category</span>
+                <span className="text-white font-semibold">{activeModalProject.category}</span>
               </div>
               <div>
-                <span className="text-zinc-500 block">PLATFORM</span>
-                <span className="text-white font-bold">{activeModalProject.platform}</span>
+                <span className="text-zinc-500 block uppercase tracking-wider text-[11px] mb-1">Platform</span>
+                <span className="text-white font-semibold">{activeModalProject.platform}</span>
               </div>
               <div>
-                <span className="text-zinc-500 block">TIMELINE</span>
-                <span className="text-white font-bold">{activeModalProject.timeline}</span>
+                <span className="text-zinc-500 block uppercase tracking-wider text-[11px] mb-1">Timeline</span>
+                <span className="text-white font-semibold">{activeModalProject.timeline}</span>
               </div>
             </div>
 
@@ -200,7 +200,7 @@ export const PortfolioSection: React.FC = () => {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {activeModalProject.results.map((r) => (
                   <div key={r.label} className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-center">
-                    <span className="text-lg font-bold font-mono text-brand-red block">{r.metric}</span>
+                    <span className="text-lg font-bold font-display text-brand-red block">{r.metric}</span>
                     <span className="text-[11px] text-zinc-400">{r.label}</span>
                   </div>
                 ))}

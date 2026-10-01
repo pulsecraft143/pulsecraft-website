@@ -36,7 +36,7 @@ export default function SolutionsPage() {
       {/* Hero */}
       <section className="py-16 sm:py-24 border-b border-dark-border relative overflow-hidden text-center">
         <div className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
+          <span className="px-3 py-1 rounded-full text-xs font-sans bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
             Tailored Industry Architectures
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-display font-semibold tracking-tight text-[#FFFFFF] max-w-3xl mx-auto leading-[1.18] sm:leading-[1.22]">
@@ -64,14 +64,14 @@ export default function SolutionsPage() {
                 className="p-6 sm:p-10 rounded-2xl bg-[#111116] border border-dark-border grid grid-cols-1 lg:grid-cols-12 gap-8 items-center hover:border-zinc-700 transition-all duration-200"
               >
                 <div className="lg:col-span-7">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/25 text-xs font-mono text-[#FF2A2A] font-semibold mb-3">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/25 text-xs font-sans text-[#FF2A2A] font-medium mb-3">
                     <Icon className="w-3.5 h-3.5" />
                     {sol.tag}
                   </div>
                   <h2 className="text-xl sm:text-2xl font-display font-semibold text-white mb-1.5">
                     {sol.title}
                   </h2>
-                  <p className="text-xs sm:text-sm font-mono text-[#FF2A2A] mb-3">
+                  <p className="text-xs sm:text-sm font-sans font-medium text-[#FF2A2A] mb-3">
                     {sol.subtitle}
                   </p>
                   <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-5 font-normal">
@@ -93,19 +93,19 @@ export default function SolutionsPage() {
                 </div>
 
                 <div className="lg:col-span-5 bg-zinc-950 p-5 sm:p-6 rounded-xl border border-zinc-800">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 block mb-1.5">
+                  <span className="text-xs font-sans uppercase tracking-wider text-zinc-400 font-semibold block mb-1.5">
                     Target Profile
                   </span>
-                  <p className="text-xs text-zinc-300 mb-4 font-mono">
+                  <p className="text-xs text-zinc-300 mb-4 font-sans">
                     {sol.targetAudience}
                   </p>
 
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 block mb-2">
+                  <span className="text-xs font-sans uppercase tracking-wider text-zinc-400 font-semibold block mb-2">
                     Featured Core Technologies
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {sol.featuredTech.map((t) => (
-                      <span key={t} className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-zinc-900 text-zinc-200 border border-zinc-700">
+                      <span key={t} className="px-2.5 py-0.5 rounded-md text-xs font-sans font-medium bg-zinc-900 text-zinc-200 border border-zinc-700">
                         {t}
                       </span>
                     ))}

@@ -154,7 +154,7 @@ export const ServicesSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
                   </div>
 
                   {/* Number & Name */}
-                  <span className="mt-3 text-[11px] font-mono text-zinc-500">
+                  <span className="mt-3 text-xs font-sans font-medium text-zinc-400">
                     {item.number}
                   </span>
                   <span
@@ -182,7 +182,7 @@ export const ServicesSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
               <button
                 key={item.number}
                 onClick={() => setActiveIdx(idx)}
-                className={`px-3.5 py-2 rounded-xl text-xs font-mono font-medium whitespace-nowrap transition-all ${
+                className={`px-3.5 py-2 rounded-xl text-xs font-sans font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'bg-brand-red text-white shadow-md'
                     : isLight
@@ -217,7 +217,7 @@ export const ServicesSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
                     <ActiveIcon className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-brand-red font-semibold">
+                    <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold">
                       Discipline {activeCapability.number}
                     </span>
                     <h3
@@ -231,7 +231,7 @@ export const ServicesSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
                 </div>
 
                 <span
-                  className={`text-xs font-mono px-3 py-1 rounded-lg border ${
+                  className={`text-xs font-sans font-medium px-3 py-1 rounded-lg border ${
                     isLight
                       ? 'bg-white border-slate-200 text-slate-700'
                       : 'bg-zinc-900 border-zinc-800 text-zinc-300'
@@ -257,13 +257,13 @@ export const ServicesSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
               {/* Technologies Highlights & Specs Link */}
               <div className="mt-6 pt-5 border-t border-zinc-800/40 flex flex-wrap items-center justify-between gap-4">
                 <div className="flex flex-wrap items-center gap-1.5">
-                  <span className="text-[11px] font-mono text-zinc-500 mr-1.5 uppercase">
+                  <span className="text-xs font-sans text-zinc-400 mr-1.5 uppercase tracking-wide">
                     Core Stack:
                   </span>
                   {activeCapability.technologies.map((t) => (
                     <span
                       key={t}
-                      className={`px-2.5 py-0.5 rounded-md text-xs font-mono ${
+                      className={`px-2.5 py-0.5 rounded-md text-xs font-sans font-medium ${
                         isLight
                           ? 'bg-white border border-slate-200 text-slate-800'
                           : 'bg-zinc-900 border border-zinc-800 text-zinc-300'
@@ -276,7 +276,7 @@ export const ServicesSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
 
                 <Link
                   href={`/services/${activeCapability.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-brand-red hover:underline"
+                  className="inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-brand-red hover:underline"
                 >
                   <span>Technical Specs</span>
                   <ArrowRight className="w-3.5 h-3.5" />

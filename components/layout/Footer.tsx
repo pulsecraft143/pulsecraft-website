@@ -8,6 +8,7 @@ import { SITE_CONFIG } from '@/lib/config';
 import {
   MapPin,
   Mail,
+  Phone,
   Linkedin,
   Github,
   Twitter,
@@ -69,7 +70,7 @@ export const Footer: React.FC = () => {
                 <span className="text-sm" role="img" aria-label="Canada">🇨🇦</span>
                 <div className="flex flex-col">
                   <span className="font-semibold text-white text-xs">Canadian Technology Company</span>
-                  <span className="text-[10px] font-mono text-zinc-400">
+                  <span className="text-xs font-sans text-zinc-400">
                     {SITE_CONFIG.headquarters.address}
                   </span>
                 </div>
@@ -120,7 +121,7 @@ export const Footer: React.FC = () => {
           {/* Newsletter Box */}
           <div className="lg:col-span-6 bg-zinc-950/80 border border-zinc-800/80 rounded-2xl p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden">
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF2A2A] font-semibold">
+              <span className="text-xs font-sans uppercase tracking-wider text-[#FF2A2A] font-semibold">
                 Intelligence Briefings
               </span>
               <h3 className="text-lg sm:text-xl font-display font-semibold text-white mt-1">
@@ -220,27 +221,27 @@ export const Footer: React.FC = () => {
               <li className="flex items-start gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#FF2A2A] shrink-0 mt-0.5" />
                 <div>
-                  <span className="block text-zinc-500 font-mono text-[10px]">General</span>
-                  <a href={`mailto:${SITE_CONFIG.contact.general}`} className="text-zinc-300 hover:text-white transition-colors">
-                    {SITE_CONFIG.contact.general}
+                  <span className="block text-zinc-500 font-sans text-xs">Support & Inquiries</span>
+                  <a href={`mailto:${SITE_CONFIG.contact.support}`} className="text-zinc-300 hover:text-white transition-colors">
+                    {SITE_CONFIG.contact.support}
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#FF2A2A] shrink-0 mt-0.5" />
+                <Phone className="w-3.5 h-3.5 text-[#FF2A2A] shrink-0 mt-0.5" />
                 <div>
-                  <span className="block text-zinc-500 font-mono text-[10px]">New Projects</span>
-                  <a href={`mailto:${SITE_CONFIG.contact.projects}`} className="text-zinc-300 hover:text-white transition-colors">
-                    {SITE_CONFIG.contact.projects}
+                  <span className="block text-zinc-500 font-sans text-xs">Corporate Line</span>
+                  <a href={`tel:${SITE_CONFIG.contact.phone.replace(/[^+\d]/g, '')}`} className="text-zinc-300 hover:text-white transition-colors">
+                    {SITE_CONFIG.contact.phone}
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#FF2A2A] shrink-0 mt-0.5" />
                 <div>
-                  <span className="block text-zinc-500 font-mono text-[10px]">Headquarters</span>
+                  <span className="block text-zinc-500 font-sans text-xs">Headquarters</span>
                   <span className="text-zinc-300">
-                    Toronto, Ontario, Canada
+                    Oshawa, Ontario, Canada
                   </span>
                 </div>
               </li>
@@ -253,7 +254,7 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-2">
             <span>© {new Date().getFullYear()} {SITE_CONFIG.legalName} All rights reserved.</span>
             <span className="hidden sm:inline text-zinc-700">•</span>
-            <span className="hidden sm:inline font-mono">🇨🇦 Canada</span>
+            <span className="hidden sm:inline font-sans">🇨🇦 Canada</span>
           </div>
 
           <div className="flex items-center gap-5">
@@ -262,9 +263,6 @@ export const Footer: React.FC = () => {
             </Link>
             <Link href="/terms" className="hover:text-zinc-300 transition-colors">
               Terms of Service
-            </Link>
-            <Link href="/admin" className="hover:text-zinc-300 transition-colors font-mono text-[11px]">
-              Admin Portal
             </Link>
           </div>
         </div>

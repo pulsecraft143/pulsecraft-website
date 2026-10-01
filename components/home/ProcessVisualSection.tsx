@@ -234,7 +234,7 @@ export const ProcessVisualSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
                     </div>
 
                     {/* Integrated Node Label */}
-                    <span className="mt-3 text-[10px] font-mono text-zinc-500">
+                    <span className="mt-3 text-xs font-sans text-zinc-400 font-medium">
                       {node.num}
                     </span>
                     <span
@@ -258,8 +258,8 @@ export const ProcessVisualSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF2A2A] font-semibold">
-                    STAGE {current.num}
+                  <span className="text-xs font-sans uppercase tracking-wider text-[#FF2A2A] font-semibold">
+                    Stage {current.num}
                   </span>
                   <span className="text-zinc-600">•</span>
                   <span className="text-sm sm:text-base font-display font-semibold text-white">

@@ -56,7 +56,7 @@ export const WhyUsSection: React.FC = () => {
                   <h3 className="text-xl font-display font-bold text-white group-hover:text-red-400 transition-colors">
                     {pillar.title}
                   </h3>
-                  <p className="mt-2 text-xs font-mono text-zinc-400">
+                  <p className="mt-2 text-xs font-sans font-medium text-zinc-400">
                     {pillar.tagline}
                   </p>
                   <p className="mt-3.5 text-sm text-zinc-400 leading-relaxed">
@@ -73,7 +73,7 @@ export const WhyUsSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-zinc-800/60 text-[11px] font-mono text-zinc-500">
+                <div className="mt-6 pt-4 border-t border-zinc-800/60 text-xs font-sans text-zinc-500">
                   Standard: Strict Excellence
                 </div>
               </div>

@@ -36,7 +36,7 @@ export const TechStackSection: React.FC = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-mono tracking-wide transition-all duration-200 ${
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-sans font-medium tracking-normal transition-all duration-200 ${
                 activeCategory === cat
                   ? 'bg-brand-red text-white shadow-[0_0_15px_rgba(255, 42, 42,0.4)] border border-red-500/50'
                   : 'bg-zinc-900/90 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800'
@@ -64,7 +64,7 @@ export const TechStackSection: React.FC = () => {
                       {tech.name}
                     </h3>
                   </div>
-                  <span className="text-[10px] font-mono text-zinc-500 bg-zinc-900/90 px-2 py-0.5 rounded border border-zinc-800">
+                  <span className="text-xs font-sans text-zinc-400 bg-zinc-900/90 px-2 py-0.5 rounded border border-zinc-800">
                     {tech.category}
                   </span>
                 </div>
@@ -73,7 +73,7 @@ export const TechStackSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-mono text-zinc-500">
+              <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-xs font-sans text-zinc-500">
                 <span>{tech.popularity || 'Enterprise Stack'}</span>
                 <span className="text-brand-red group-hover:underline">Explore →</span>
               </div>

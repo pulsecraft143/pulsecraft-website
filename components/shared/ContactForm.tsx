@@ -143,7 +143,7 @@ export const ContactForm: React.FC<{ isLight?: boolean }> = ({ isLight = false }
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label
-                  className={`block text-xs font-mono uppercase tracking-wider mb-2 font-medium ${
+                  className={`block text-xs font-sans tracking-wide mb-2 font-medium ${
                     isLight ? 'text-slate-700' : 'text-zinc-300'
                   }`}
                 >
@@ -166,7 +166,7 @@ export const ContactForm: React.FC<{ isLight?: boolean }> = ({ isLight = false }
 
               <div>
                 <label
-                  className={`block text-xs font-mono uppercase tracking-wider mb-2 font-medium ${
+                  className={`block text-xs font-sans tracking-wide mb-2 font-medium ${
                     isLight ? 'text-slate-700' : 'text-zinc-300'
                   }`}
                 >
@@ -192,7 +192,7 @@ export const ContactForm: React.FC<{ isLight?: boolean }> = ({ isLight = false }
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label
-                  className={`block text-xs font-mono uppercase tracking-wider mb-2 font-medium ${
+                  className={`block text-xs font-sans tracking-wide mb-2 font-medium ${
                     isLight ? 'text-slate-700' : 'text-zinc-300'
                   }`}
                 >
@@ -214,7 +214,7 @@ export const ContactForm: React.FC<{ isLight?: boolean }> = ({ isLight = false }
 
               <div>
                 <label
-                  className={`block text-xs font-mono uppercase tracking-wider mb-2 font-medium ${
+                  className={`block text-xs font-sans tracking-wide mb-2 font-medium ${
                     isLight ? 'text-slate-700' : 'text-zinc-300'
                   }`}
                 >
@@ -239,7 +239,7 @@ export const ContactForm: React.FC<{ isLight?: boolean }> = ({ isLight = false }
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label
-                  className={`block text-xs font-mono uppercase tracking-wider mb-2 font-medium ${
+                  className={`block text-xs font-sans tracking-wide mb-2 font-medium ${
                     isLight ? 'text-slate-700' : 'text-zinc-300'
                   }`}
                 >
@@ -265,7 +265,7 @@ export const ContactForm: React.FC<{ isLight?: boolean }> = ({ isLight = false }
 
               <div>
                 <label
-                  className={`block text-xs font-mono uppercase tracking-wider mb-2 font-medium ${
+                  className={`block text-xs font-sans tracking-wide mb-2 font-medium ${
                     isLight ? 'text-slate-700' : 'text-zinc-300'
                   }`}
                 >
@@ -293,7 +293,7 @@ export const ContactForm: React.FC<{ isLight?: boolean }> = ({ isLight = false }
             {/* Row 4: Project Details */}
             <div>
               <label
-                className={`block text-xs font-mono uppercase tracking-wider mb-2 font-medium ${
+                className={`block text-xs font-sans tracking-wide mb-2 font-medium ${
                   isLight ? 'text-slate-700' : 'text-zinc-300'
                 }`}
               >
@@ -325,7 +325,7 @@ export const ContactForm: React.FC<{ isLight?: boolean }> = ({ isLight = false }
               Submit Project Inquiry
             </Button>
 
-            <p className="text-center text-xs text-zinc-500 font-mono">
+            <p className="text-center text-xs text-zinc-500 font-sans">
               🔒 Protected by 256-bit Canadian PIPEDA & SOC 2 data privacy protocols.
             </p>
           </form>

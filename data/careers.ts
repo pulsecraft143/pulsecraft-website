@@ -39,7 +39,7 @@ export const CAREER_JOBS: JobPosition[] = [
     slug: 'lead-mobile-engineer-kotlin-swift',
     title: 'Lead Mobile Engineer (Kotlin / Swift)',
     department: 'Engineering',
-    location: 'Toronto, ON (Hybrid / Remote in Canada)',
+    location: 'Oshawa, ON (Hybrid / Remote in Canada)',
     employmentType: 'Full-time',
     experience: '5+ Years Experience',
     overview:
@@ -69,7 +69,7 @@ export const CAREER_JOBS: JobPosition[] = [
     slug: 'senior-fullstack-engineer-nextjs-nodejs',
     title: 'Senior Full-Stack Engineer (Next.js & TypeScript)',
     department: 'Engineering',
-    location: 'Toronto, ON (Hybrid / Remote in Canada)',
+    location: 'Oshawa, ON (Hybrid / Remote in Canada)',
     employmentType: 'Full-time',
     experience: '4+ Years Experience',
     overview:
@@ -99,7 +99,7 @@ export const CAREER_JOBS: JobPosition[] = [
     slug: 'ai-ml-solutions-architect',
     title: 'AI & LLM Solutions Architect',
     department: 'AI Research',
-    location: 'Toronto, ON (Hybrid / Remote)',
+    location: 'Oshawa, ON (Hybrid / Remote)',
     employmentType: 'Full-time',
     experience: '4+ Years Experience',
     overview:
@@ -129,7 +129,7 @@ export const CAREER_JOBS: JobPosition[] = [
     slug: 'senior-product-designer-ui-ux',
     title: 'Senior Product Designer (UI / UX / Systems)',
     department: 'Design',
-    location: 'Toronto, ON (Remote / Hybrid)',
+    location: 'Oshawa, ON (Remote / Hybrid)',
     employmentType: 'Full-time',
     experience: '4+ Years Experience',
     overview:

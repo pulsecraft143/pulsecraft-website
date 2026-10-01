@@ -61,7 +61,7 @@ export const TechMarqueeSection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                 {tech.name}
               </span>
               <span
-                className={`text-[10px] font-mono uppercase px-2 py-0.5 rounded ${
+                className={`text-[11px] font-sans font-medium px-2 py-0.5 rounded ${
                   isLight ? 'bg-slate-100 text-slate-500' : 'bg-zinc-900 text-zinc-400 border border-zinc-800'
                 }`}
               >

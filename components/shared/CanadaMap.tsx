@@ -14,17 +14,17 @@ export const CanadaMap: React.FC<CanadaMapProps> = ({
   theme = 'dark',
   className = '',
 }) => {
-  const [selectedHub, setSelectedHub] = useState<'toronto' | 'vancouver' | 'montreal'>('toronto');
+  const [selectedHub, setSelectedHub] = useState<'oshawa' | 'vancouver' | 'montreal'>('oshawa');
 
   const hubs = {
-    toronto: {
-      name: 'Toronto Headquarters (Registered Office)',
+    oshawa: {
+      name: 'Oshawa Headquarters (Registered Office)',
       region: 'Ontario, Canada',
       address: SITE_CONFIG.headquarters.address,
       coordinates: `${SITE_CONFIG.headquarters.coordinates.lat}° N, ${Math.abs(SITE_CONFIG.headquarters.coordinates.lng)}° W`,
       type: 'Global Corporate HQ & Engineering Hub',
       badge: 'Primary HQ',
-      pos: { x: 74, y: 82 }, // Percentage coordinates on Canada SVG map
+      pos: { x: 75, y: 82 }, // Percentage coordinates on Canada SVG map
     },
     vancouver: {
       name: 'Vancouver Tech Studio',
@@ -56,9 +56,9 @@ export const CanadaMap: React.FC<CanadaMapProps> = ({
       {/* Header Info */}
       <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-zinc-800/80">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/20 text-xs font-mono text-brand-red font-semibold mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/20 text-xs font-sans text-brand-red font-semibold mb-3">
             <span className="text-base" role="img" aria-label="Canadian Flag">🇨🇦</span>
-            CANADIAN CORPORATE JURISDICTION
+            Canadian Corporate Jurisdiction
           </div>
           <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
             {SITE_CONFIG.legalName}
@@ -80,7 +80,7 @@ export const CanadaMap: React.FC<CanadaMapProps> = ({
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-800'
               }`}
             >
-              {hubKey === 'toronto' ? 'Toronto (HQ)' : hubKey === 'vancouver' ? 'Vancouver' : 'Montreal'}
+              {hubKey === 'oshawa' ? 'Oshawa (HQ)' : hubKey === 'vancouver' ? 'Vancouver' : 'Montreal'}
             </button>
           ))}
         </div>
@@ -129,27 +129,27 @@ export const CanadaMap: React.FC<CanadaMapProps> = ({
               <span className="absolute w-6 h-6 rounded-full bg-brand-red/30 animate-ping" />
               <span className="w-3.5 h-3.5 rounded-full bg-brand-red border-2 border-white shadow-lg" />
             </div>
-            <span className="absolute top-5 left-1/2 -translate-x-1/2 text-[10px] font-mono text-zinc-300 whitespace-nowrap bg-black/80 px-1.5 py-0.5 rounded border border-zinc-700">
+            <span className="absolute top-5 left-1/2 -translate-x-1/2 text-xs font-sans font-medium text-zinc-300 whitespace-nowrap bg-black/85 px-2 py-0.5 rounded-full border border-zinc-700 shadow-md">
               Vancouver
             </span>
           </div>
 
-          {/* Toronto HQ Pin (Main) */}
+          {/* Oshawa HQ Pin (Main) */}
           <div
-            onClick={() => setSelectedHub('toronto')}
+            onClick={() => setSelectedHub('oshawa')}
             className={`absolute cursor-pointer transition-all duration-300 transform -translate-x-1/2 -translate-y-1/2 ${
-              selectedHub === 'toronto' ? 'scale-125 z-20' : 'opacity-80 hover:opacity-100'
+              selectedHub === 'oshawa' ? 'scale-125 z-20' : 'opacity-80 hover:opacity-100'
             }`}
-            style={{ left: `${hubs.toronto.pos.x}%`, top: `${hubs.toronto.pos.y}%` }}
+            style={{ left: `${hubs.oshawa.pos.x}%`, top: `${hubs.oshawa.pos.y}%` }}
           >
             <div className="relative flex items-center justify-center">
               <span className="absolute w-8 h-8 rounded-full bg-red-500/40 animate-ping" />
-              <div className="p-1.5 rounded-full bg-brand-red text-white border-2 border-white shadow-[0_0_15px_rgba(255, 42, 42,0.9)]">
+              <div className="p-1.5 rounded-full bg-brand-red text-white border-2 border-white shadow-[0_0_15px_rgba(255,42,42,0.9)]">
                 <MapPin className="w-4 h-4" />
               </div>
             </div>
-            <span className="absolute top-7 left-1/2 -translate-x-1/2 text-[10px] font-mono font-bold text-white whitespace-nowrap bg-brand-red/90 px-2 py-0.5 rounded-full border border-red-400/40 shadow-lg">
-              ★ Toronto HQ
+            <span className="absolute top-7 left-1/2 -translate-x-1/2 text-xs font-sans font-semibold text-white whitespace-nowrap bg-brand-red/90 px-2.5 py-0.5 rounded-full border border-red-400/40 shadow-lg">
+              ★ Oshawa HQ
             </span>
           </div>
 
@@ -165,15 +165,15 @@ export const CanadaMap: React.FC<CanadaMapProps> = ({
               <span className="absolute w-6 h-6 rounded-full bg-brand-red/30 animate-ping" />
               <span className="w-3.5 h-3.5 rounded-full bg-brand-red border-2 border-white shadow-lg" />
             </div>
-            <span className="absolute top-5 left-1/2 -translate-x-1/2 text-[10px] font-mono text-zinc-300 whitespace-nowrap bg-black/80 px-1.5 py-0.5 rounded border border-zinc-700">
+            <span className="absolute top-5 left-1/2 -translate-x-1/2 text-xs font-sans font-medium text-zinc-300 whitespace-nowrap bg-black/85 px-2 py-0.5 rounded-full border border-zinc-700 shadow-md">
               Montréal
             </span>
           </div>
 
           {/* Compass Rose */}
-          <div className="absolute top-4 right-4 flex items-center gap-1 text-[11px] font-mono text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-lg border border-zinc-800">
+          <div className="absolute top-4 right-4 flex items-center gap-1.5 text-xs font-sans text-zinc-400 bg-zinc-900/85 px-3 py-1.5 rounded-xl border border-zinc-800">
             <Compass className="w-3.5 h-3.5 text-brand-red animate-spin" style={{ animationDuration: '20s' }} />
-            <span>GEO-CAD: 43.6487° N</span>
+            <span>GEO: 43.9480° N</span>
           </div>
         </div>
 
@@ -181,17 +181,17 @@ export const CanadaMap: React.FC<CanadaMapProps> = ({
         <div className="lg:col-span-5 bg-zinc-900/80 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between h-full">
           <div>
             <div className="flex items-center justify-between gap-2 mb-2">
-              <span className="text-xs font-mono text-brand-red font-semibold uppercase tracking-wider">
+              <span className="text-xs font-sans text-brand-red font-semibold uppercase tracking-wider">
                 {currentHub.badge}
               </span>
-              <span className="text-[11px] font-mono text-zinc-500">
+              <span className="text-xs font-sans text-zinc-400">
                 {currentHub.region}
               </span>
             </div>
             <h4 className="text-xl font-display font-bold text-white">
               {currentHub.name}
             </h4>
-            <p className="mt-2 text-xs font-mono text-zinc-400 bg-zinc-950/70 p-2.5 rounded-xl border border-zinc-800/80">
+            <p className="mt-2 text-xs font-sans text-zinc-300 bg-zinc-950/70 p-2.5 rounded-xl border border-zinc-800/80 leading-relaxed">
               {currentHub.address}
             </p>
             <div className="mt-4 space-y-2 text-xs text-zinc-400">
@@ -201,7 +201,7 @@ export const CanadaMap: React.FC<CanadaMapProps> = ({
               </div>
               <div className="flex items-center justify-between py-1.5 border-b border-zinc-800">
                 <span className="text-zinc-500">GPS Coordinates:</span>
-                <span className="text-zinc-200 font-mono">{currentHub.coordinates}</span>
+                <span className="text-zinc-200 font-sans">{currentHub.coordinates}</span>
               </div>
               <div className="flex items-center justify-between py-1.5 border-b border-zinc-800">
                 <span className="text-zinc-500">Office Hours:</span>

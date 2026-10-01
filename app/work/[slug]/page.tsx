@@ -52,7 +52,7 @@ export default function CaseStudyDetailPage({
       {/* Breadcrumb & Hero */}
       <section className="py-16 sm:py-24 border-b border-dark-border relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 mb-6">
+          <div className="flex items-center gap-2 text-xs font-sans font-medium text-zinc-400 mb-6">
             <Link href="/" className="hover:text-zinc-300">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/work" className="hover:text-zinc-300">Our Work</Link>
@@ -61,15 +61,15 @@ export default function CaseStudyDetailPage({
           </div>
 
           <div className="flex flex-wrap items-center gap-3 mb-6">
-            <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/30 text-brand-red font-semibold">
+            <span className="px-3 py-1 rounded-full text-xs font-sans font-medium bg-brand-red/10 border border-brand-red/30 text-brand-red">
               {project.category} Case Study
             </span>
-            <span className="px-3 py-1 rounded-full text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">
+            <span className="px-3 py-1 rounded-full text-xs font-sans font-medium bg-zinc-900 border border-zinc-800 text-zinc-300">
               {project.industry}
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white max-w-5xl tracking-tight leading-[1.15]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-semibold text-white max-w-5xl tracking-tight leading-[1.15]">
             {project.title}
           </h1>
           <p className="mt-4 text-base sm:text-xl text-zinc-400 max-w-3xl leading-relaxed">
@@ -79,20 +79,20 @@ export default function CaseStudyDetailPage({
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 pt-8 border-t border-zinc-800/80">
             <div>
-              <span className="text-[11px] font-mono text-zinc-500 block uppercase">Client</span>
-              <span className="text-sm sm:text-base font-bold text-white">{project.client}</span>
+              <span className="text-xs font-sans text-zinc-400 block uppercase tracking-wider mb-1">Client</span>
+              <span className="text-sm sm:text-base font-semibold text-white">{project.client}</span>
             </div>
             <div>
-              <span className="text-[11px] font-mono text-zinc-500 block uppercase">Platform</span>
-              <span className="text-sm sm:text-base font-bold text-white">{project.platform}</span>
+              <span className="text-xs font-sans text-zinc-400 block uppercase tracking-wider mb-1">Platform</span>
+              <span className="text-sm sm:text-base font-semibold text-white">{project.platform}</span>
             </div>
             <div>
-              <span className="text-[11px] font-mono text-zinc-500 block uppercase">Timeline</span>
-              <span className="text-sm sm:text-base font-bold text-white">{project.timeline}</span>
+              <span className="text-xs font-sans text-zinc-400 block uppercase tracking-wider mb-1">Timeline</span>
+              <span className="text-sm sm:text-base font-semibold text-white">{project.timeline}</span>
             </div>
             <div>
-              <span className="text-[11px] font-mono text-zinc-500 block uppercase">Primary Impact</span>
-              <span className="text-sm sm:text-base font-bold text-brand-red font-mono">{project.results[0]?.metric}</span>
+              <span className="text-xs font-sans text-zinc-400 block uppercase tracking-wider mb-1">Primary Impact</span>
+              <span className="text-sm sm:text-base font-bold text-brand-red font-display">{project.results[0]?.metric}</span>
             </div>
           </div>
         </div>
@@ -119,11 +119,11 @@ export default function CaseStudyDetailPage({
             <div className="lg:col-span-8 space-y-16">
               {/* Challenge */}
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-2">
-                  01. The Challenge
+                <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-2">
+                  The Problem & Challenge
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-4">
-                  The Problem & Technical Bottlenecks
+                <h2 className="text-2xl sm:text-3xl font-display font-semibold text-white mb-4">
+                  Technical Bottlenecks & Strategic Imperative
                 </h2>
                 <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
                   {project.challenge}
@@ -132,11 +132,11 @@ export default function CaseStudyDetailPage({
 
               {/* Strategy */}
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-2">
-                  02. The Strategy
+                <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-2">
+                  The Engineering Strategy
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-4">
-                  Engineering Architecture & Approach
+                <h2 className="text-2xl sm:text-3xl font-display font-semibold text-white mb-4">
+                  Architecture & Implementation Strategy
                 </h2>
                 <p className="text-sm sm:text-base text-zinc-300 leading-relaxed mb-6">
                   {project.strategy}
@@ -145,11 +145,11 @@ export default function CaseStudyDetailPage({
 
               {/* Design Highlights */}
               <div className="p-8 rounded-3xl bg-[#121217] border border-dark-border">
-                <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-2">
-                  03. UI/UX Design System
+                <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-2">
+                  Design System & UX
                 </span>
-                <h3 className="text-xl font-display font-bold text-white mb-6">
-                  User Experience & Tactile Micro-Interactions
+                <h3 className="text-xl font-display font-semibold text-white mb-6">
+                  Tactile Interactions & User-Centric Workflows
                 </h3>
                 <div className="space-y-3">
                   {project.designHighlights.map((dh) => (
@@ -163,11 +163,11 @@ export default function CaseStudyDetailPage({
 
               {/* Development Highlights */}
               <div className="p-8 rounded-3xl bg-[#121217] border border-dark-border">
-                <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-2">
-                  04. Full-Stack Development
+                <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-2">
+                  Full-Stack Architecture
                 </span>
-                <h3 className="text-xl font-display font-bold text-white mb-6">
-                  Code Architecture & Scalability Highlights
+                <h3 className="text-xl font-display font-semibold text-white mb-6">
+                  Code Performance & Scalability Highlights
                 </h3>
                 <div className="space-y-3">
                   {project.developmentHighlights.map((dev) => (
@@ -186,8 +186,8 @@ export default function CaseStudyDetailPage({
                   <p className="text-base sm:text-lg italic text-zinc-200 leading-relaxed">
                     &quot;{project.testimonial.quote}&quot;
                   </p>
-                  <div className="mt-6 pt-4 border-t border-zinc-800 flex items-center justify-between text-xs font-mono">
-                    <span className="text-white font-bold">{project.testimonial.author}</span>
+                  <div className="mt-6 pt-4 border-t border-zinc-800 flex items-center justify-between text-xs font-sans font-medium">
+                    <span className="text-white font-semibold">{project.testimonial.author}</span>
                     <span className="text-zinc-400">{project.testimonial.role}, {project.testimonial.company}</span>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ export default function CaseStudyDetailPage({
               {/* Gallery */}
               {project.galleryImages.length > 0 && (
                 <div>
-                  <h3 className="text-xl font-display font-bold text-white mb-6">
+                  <h3 className="text-xl font-display font-semibold text-white mb-6">
                     Project Gallery & Interfaces
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -220,16 +220,16 @@ export default function CaseStudyDetailPage({
               <div className="sticky top-28 space-y-6">
                 {/* Results Card */}
                 <div className="p-6 sm:p-8 rounded-3xl bg-[#14141A] border border-dark-border">
-                  <span className="text-xs font-mono uppercase tracking-wider text-brand-red font-semibold block mb-4">
-                    05. Results & Metrics
+                  <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-4">
+                    Results & Measurable Impact
                   </span>
                   <div className="space-y-4">
                     {project.results.map((res) => (
                       <div key={res.label} className="p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
-                        <span className="text-2xl font-bold font-mono text-white block">
+                        <span className="text-2xl font-bold font-display text-white block">
                           {res.metric}
                         </span>
-                        <span className="text-xs text-zinc-400 font-mono mt-0.5 block">
+                        <span className="text-xs text-zinc-400 font-sans mt-0.5 block">
                           {res.label}
                         </span>
                       </div>
@@ -239,7 +239,7 @@ export default function CaseStudyDetailPage({
 
                 {/* Tech Stack Card */}
                 <div className="p-6 sm:p-8 rounded-3xl bg-[#14141A] border border-dark-border">
-                  <span className="text-xs font-mono uppercase tracking-wider text-zinc-400 block mb-4">
+                  <span className="text-xs font-sans uppercase tracking-wider text-zinc-400 block mb-4">
                     Technology Stack
                   </span>
                   <div className="flex flex-wrap gap-2 mb-6">

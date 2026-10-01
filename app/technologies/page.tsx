@@ -26,7 +26,7 @@ export default function TechnologiesPage() {
       {/* Hero */}
       <section className="py-16 sm:py-24 border-b border-dark-border relative overflow-hidden text-center">
         <div className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <span className="px-3 py-1 rounded-full text-xs font-mono bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
+          <span className="px-3 py-1 rounded-full text-xs font-sans bg-brand-red/10 border border-brand-red/25 text-[#FF2A2A] font-semibold uppercase tracking-wider mb-4 inline-block">
             Full-Stack Technology Ecosystem
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-display font-semibold tracking-tight text-[#FFFFFF] max-w-3xl mx-auto leading-[1.18] sm:leading-[1.22]">
@@ -62,7 +62,7 @@ export default function TechnologiesPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all duration-150 ${
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-sans font-medium transition-all duration-150 ${
                   activeCategory === cat
                     ? 'bg-[#FF2A2A] text-white shadow-sm'
                     : 'bg-zinc-900 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800'
@@ -85,7 +85,7 @@ export default function TechnologiesPage() {
                     <div className="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-[#FF2A2A]">
                       <Code2 className="w-4 h-4" />
                     </div>
-                    <span className="text-[10px] font-mono text-zinc-500 bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">
+                    <span className="text-xs font-sans text-zinc-400 bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800 font-medium">
                       {tech.category}
                     </span>
                   </div>
@@ -98,7 +98,7 @@ export default function TechnologiesPage() {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-zinc-800/80 flex items-center justify-between text-xs font-mono text-zinc-500">
+                <div className="pt-3 border-t border-zinc-800/80 flex items-center justify-between text-xs font-sans text-zinc-400 font-medium">
                   <span>Status:</span>
                   <span className="text-[#FF2A2A] font-medium">{tech.popularity}</span>
                 </div>
@@ -107,7 +107,7 @@ export default function TechnologiesPage() {
           </div>
 
           {filteredTech.length === 0 && (
-            <div className="text-center py-12 text-zinc-500 font-mono text-xs">
+            <div className="text-center py-12 text-zinc-400 font-sans text-xs">
               No technologies match &quot;{searchQuery}&quot;. Try searching for &quot;React&quot;, &quot;Kotlin&quot;, or &quot;OpenAI&quot;.
             </div>
           )}

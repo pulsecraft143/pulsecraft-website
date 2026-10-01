@@ -46,7 +46,7 @@ export const CanadaSection: React.FC = () => {
             <div className="relative w-full h-[320px] sm:h-[380px] lg:h-[420px] bg-zinc-950 overflow-hidden group">
               <Image
                 src="/images/toronto-skyline-dusk.jpg"
-                alt="Toronto Skyline at Dusk — PulseCraft Technologies Inc. Canadian Headquarters"
+                alt="PulseCraft Technologies Inc. Canadian Headquarters — Oshawa, Ontario"
                 fill
                 priority
                 className="object-cover object-center brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
@@ -56,9 +56,9 @@ export const CanadaSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#111116] via-black/30 to-transparent pointer-events-none" />
 
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 rounded-full text-xs font-mono bg-black/85 backdrop-blur-md text-white border border-zinc-700 flex items-center gap-1.5 shadow-md">
+                <span className="px-3.5 py-1.5 rounded-full text-xs font-sans font-medium bg-black/85 backdrop-blur-md text-white border border-zinc-700 flex items-center gap-1.5 shadow-md">
                   <span role="img" aria-label="Canada">🇨🇦</span>
-                  <span className="tracking-wide">Toronto, Ontario</span>
+                  <span className="tracking-wide">Oshawa, Ontario</span>
                 </span>
               </div>
             </div>
@@ -67,12 +67,12 @@ export const CanadaSection: React.FC = () => {
             <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[11px] font-mono tracking-widest uppercase text-[#FF2A2A] font-semibold">
-                    🇨🇦 CANADA
+                  <span className="text-xs font-sans tracking-wider uppercase text-[#FF2A2A] font-semibold">
+                    🇨🇦 Canada
                   </span>
                   <span className="text-zinc-600">•</span>
-                  <span className="text-[11px] font-mono text-zinc-400">
-                    FEDERALLY REGISTERED
+                  <span className="text-xs font-sans text-zinc-400 font-medium">
+                    Federally Registered
                   </span>
                 </div>
 
@@ -87,16 +87,16 @@ export const CanadaSection: React.FC = () => {
                 </p>
 
                 {/* Clean Information Block */}
-                <div className="p-4 rounded-xl bg-zinc-950/90 border border-zinc-800/80 space-y-2 text-xs font-mono text-zinc-300">
+                <div className="p-4 rounded-xl bg-zinc-950/90 border border-zinc-800/80 space-y-2 text-xs font-sans text-zinc-300">
                   <div className="flex items-center justify-between pb-2 border-b border-zinc-800/80">
-                    <span className="font-semibold text-white tracking-wider text-[11px]">
+                    <span className="font-semibold text-white tracking-wider text-xs">
                       {SITE_CONFIG.legalName}
                     </span>
-                    <span className="text-[#FF2A2A] text-[11px]">🇨🇦 Canada</span>
+                    <span className="text-[#FF2A2A] text-xs font-medium">🇨🇦 Canada</span>
                   </div>
                   <div className="flex items-start gap-2 pt-1 text-zinc-400">
                     <MapPin className="w-3.5 h-3.5 text-[#FF2A2A] shrink-0 mt-0.5" />
-                    <span>{SITE_CONFIG.headquarters.address}</span>
+                    <span className="font-sans leading-relaxed">{SITE_CONFIG.headquarters.address}</span>
                   </div>
                 </div>
               </div>

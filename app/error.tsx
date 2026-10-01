@@ -22,16 +22,16 @@ export default function GlobalError({
           <AlertTriangle className="w-8 h-8" />
         </div>
 
-        <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-2">
-          SYSTEM FAULT // EXCEPTION CAUGHT
+        <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-2">
+          Application Notice
         </span>
 
-        <h1 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
-          Runtime Exception
+        <h1 className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-tight">
+          Something Went Wrong
         </h1>
 
-        <p className="mt-4 text-xs font-mono text-zinc-400 p-3 rounded-xl bg-zinc-950 border border-zinc-800 leading-relaxed text-left">
-          {error.message || 'An unexpected failure occurred while rendering this view.'}
+        <p className="mt-4 text-xs font-sans text-zinc-400 p-3 rounded-xl bg-zinc-950 border border-zinc-800 leading-relaxed text-left">
+          {error.message || 'An unexpected issue occurred while rendering this view.'}
         </p>
 
         <div className="mt-8 flex items-center justify-center gap-4">

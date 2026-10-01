@@ -59,7 +59,7 @@ export const ProcessSection: React.FC = () => {
                     </div>
                   </div>
 
-                  <span className="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold block mb-1">
+                  <span className="text-xs font-sans uppercase tracking-wider text-slate-500 font-semibold block mb-1">
                     {step.phase}
                   </span>
                   <h3 className="text-xl font-display font-bold text-slate-900 group-hover:text-brand-red transition-colors">
@@ -71,7 +71,7 @@ export const ProcessSection: React.FC = () => {
 
                   {/* Key Activities */}
                   <div className="mt-6 pt-5 border-t border-slate-200/80 space-y-2">
-                    <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block mb-2 font-semibold">
+                    <span className="text-xs font-sans text-slate-500 uppercase tracking-wider block mb-2 font-semibold">
                       Key Activities
                     </span>
                     {step.activities.slice(0, 3).map((act) => (
@@ -84,7 +84,7 @@ export const ProcessSection: React.FC = () => {
                 </div>
 
                 {/* Deliverables Footer */}
-                <div className="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 font-mono">
+                <div className="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 font-sans font-medium">
                   <span>Output: {step.deliverables[0]}</span>
                 </div>
               </div>

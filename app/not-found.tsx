@@ -14,16 +14,16 @@ export default function NotFound() {
           <Logo variant="icon" size="lg" isLink={false} />
         </div>
 
-        <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-2">
-          HTTP 404 // RESOURCE NOT FOUND
+        <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-2">
+          Page Not Found
         </span>
 
-        <h1 className="text-6xl sm:text-8xl font-display font-extrabold text-white tracking-tight">
+        <h1 className="text-6xl sm:text-8xl font-display font-semibold text-white tracking-tight">
           4<span className="text-brand-red">0</span>4
         </h1>
 
-        <p className="mt-4 text-sm text-zinc-400 leading-relaxed">
-          The requested system node or route does not exist within the PulseCraft network cluster.
+        <p className="mt-4 text-sm text-zinc-400 leading-relaxed font-normal">
+          The page you are looking for does not exist or has been relocated.
         </p>
 
         <div className="mt-8 flex items-center justify-center gap-4">
