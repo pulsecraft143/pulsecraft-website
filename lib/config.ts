@@ -44,7 +44,7 @@ export const SITE_CONFIG = {
 
   // Social Links
   socials: {
-    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com/company/pulsecraft-technologies',
+    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://www.linkedin.com/company/pulsecraft-technologies-inc/',
     github: process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/pulsecraft-technologies',
     twitter: process.env.NEXT_PUBLIC_TWITTER_URL || 'https://twitter.com/pulsecraft_tech',
     instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://instagram.com/pulsecraft.tech',

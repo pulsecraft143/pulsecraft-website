@@ -1,15 +1,15 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { PulseIntelligenceVisual } from '@/components/home/PulseIntelligenceVisual';
-import { HeroAiBackground } from '@/components/home/HeroAiBackground';
 import { ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/lib/config';
 
 export const HeroSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -19,7 +19,6 @@ export const HeroSection: React.FC = () => {
   // Subtle Parallax & Cinematic Exit
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 24]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.75, 1], [1, 0.85, 0.2]);
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, 48]);
 
   const transitionConfig = {
     duration: 0.7,
@@ -29,24 +28,20 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[86vh] lg:min-h-[90vh] bg-dark-void text-white flex items-center justify-center pt-24 pb-16 lg:py-20 overflow-hidden"
+      className="relative min-h-[88vh] lg:min-h-[92vh] bg-dark-void text-white flex items-center justify-center pt-24 pb-16 lg:py-20 overflow-hidden"
     >
-      {/* Layer 2: Subtle Intelligent AI Network Canvas Background with Parallax */}
-      <motion.div style={{ y: bgY }} className="absolute inset-0 w-full h-full pointer-events-none z-0">
-        <HeroAiBackground />
-      </motion.div>
+      {/* Layer 1: Clean Ambient Radial Lighting (Subtle Red Vignette) */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-b from-[#FF2A2A]/10 via-[#FF2A2A]/05 to-transparent rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-white/[0.02] rounded-full blur-[160px] pointer-events-none z-0" />
 
-      {/* Layer 3: Subtle Ambient Radial Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[520px] h-[280px] bg-brand-red/10 rounded-full blur-[160px] pointer-events-none z-[1]" />
-
-      {/* Layer 4: Hero Content with Staggered Entrance & Exit Parallax */}
+      {/* Layer 2: Hero Content with Multi-Device Product Showcase */}
       <motion.div
-        style={{ y: contentY, opacity: contentOpacity }}
+        style={prefersReducedMotion ? {} : { y: contentY, opacity: contentOpacity }}
         className="relative z-10 w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Brand Eyebrow, Heading, Subtext & CTA */}
-          <div className="lg:col-span-7 text-left">
+          <div className="lg:col-span-6 text-left">
             {/* 1. Minimal Eyebrow Badge (Entrance: 100ms) */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -60,7 +55,7 @@ export const HeroSection: React.FC = () => {
                   className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF2A2A] opacity-60"
                   style={{ animationDuration: '2.5s' }}
                 />
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#FF2A2A] shadow-[0_0_8px_rgba(255, 42, 42,0.9)]" />
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#FF2A2A] shadow-[0_0_8px_rgba(255,42,42,0.9)]" />
               </span>
 
               {/* Eyebrow Label Text */}
@@ -79,7 +74,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...transitionConfig, delay: 0.2 }}
-              className="text-4xl sm:text-5xl lg:text-[60px] xl:text-[68px] font-display font-bold tracking-[-0.03em] leading-[1.12] sm:leading-[1.14] text-[#FFFFFF]"
+              className="text-4xl sm:text-5xl lg:text-[52px] xl:text-[60px] font-display font-bold tracking-[-0.03em] leading-[1.12] sm:leading-[1.14] text-[#FFFFFF]"
             >
               Ideas Have a{' '}
               <span className="text-[#FF2A2A] font-extrabold drop-shadow-[0_0_24px_rgba(255,42,42,0.35)]">
@@ -143,7 +138,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FF2A2A]" />
-                <span>Modern Cloud & Mobile</span>
+                <span>Web · iOS · Android</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FF2A2A]" />
@@ -152,12 +147,12 @@ export const HeroSection: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Right Column: Abstract Pulse Intelligence Visual */}
+          {/* Right Column: Multi-Device Technology Showcase (MacBook Pro + iPhone 15 Pro + Android Flagship) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ ...transitionConfig, delay: 0.28 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-6 relative flex items-center justify-center"
           >
             <PulseIntelligenceVisual />
           </motion.div>
