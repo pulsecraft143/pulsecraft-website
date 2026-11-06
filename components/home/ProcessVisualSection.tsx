@@ -62,35 +62,53 @@ export const ProcessVisualSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
   theme = 'dark',
 }) => {
   const [activeNode, setActiveNode] = useState(1);
+  const activeNodeRef = useRef(activeNode);
+  activeNodeRef.current = activeNode;
+
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(containerRef, { once: true, margin: '-60px' });
+  const isSectionInView = useInView(containerRef, { margin: '150px' });
 
   // Auto-progress stages softly when in view
   useEffect(() => {
-    if (!isInView) return;
+    if (!isSectionInView) return;
     const interval = setInterval(() => {
       setActiveNode((prev) => (prev + 1) % PROCESS_NODES.length);
     }, 4500);
     return () => clearInterval(interval);
-  }, [isInView]);
+  }, [isSectionInView]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas || !isSectionInView) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     let animationFrameId: number;
     let time = 0;
 
-    const render = () => {
-      const w = (canvas.width = canvas.offsetWidth * (window.devicePixelRatio || 1));
-      const h = (canvas.height = canvas.offsetHeight * (window.devicePixelRatio || 1));
-      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-
+    const resizeCanvas = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const displayW = canvas.offsetWidth;
       const displayH = canvas.offsetHeight;
+      if (displayW === 0 || displayH === 0) return;
+
+      canvas.width = Math.floor(displayW * dpr);
+      canvas.height = Math.floor(displayH * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas, { passive: true });
+
+    const render = () => {
+      const displayW = canvas.offsetWidth;
+      const displayH = canvas.offsetHeight;
+
+      if (displayW === 0 || displayH === 0) {
+        animationFrameId = requestAnimationFrame(render);
+        return;
+      }
 
       ctx.clearRect(0, 0, displayW, displayH);
 
@@ -151,9 +169,10 @@ export const ProcessVisualSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
       ctx.fill();
 
       // 4. Subtle Vertical Calipers for each node
+      const currentActive = activeNodeRef.current;
       for (let i = 0; i < PROCESS_NODES.length; i++) {
         const nodeX = startX + i * stepWidth;
-        const isActive = activeNode === i;
+        const isActive = currentActive === i;
 
         ctx.beginPath();
         ctx.moveTo(nodeX, centerY - 25);
@@ -168,8 +187,11 @@ export const ProcessVisualSection: React.FC<{ theme?: 'dark' | 'light' }> = ({
 
     render();
 
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [activeNode]);
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [isSectionInView]);
 
   const current = PROCESS_NODES[activeNode];
   const Icon = current.icon;

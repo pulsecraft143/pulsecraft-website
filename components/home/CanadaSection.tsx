@@ -48,7 +48,6 @@ export const CanadaSection: React.FC = () => {
                 src="/images/toronto-skyline-dusk.jpg"
                 alt="PulseCraft Technologies Inc. Canadian Headquarters — Oshawa, Ontario"
                 fill
-                priority
                 className="object-cover object-center brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

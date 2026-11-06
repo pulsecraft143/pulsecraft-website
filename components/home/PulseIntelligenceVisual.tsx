@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import {
   Sparkles,
   TrendingUp,
@@ -25,10 +25,23 @@ import {
 
 export const PulseIntelligenceVisual: React.FC = () => {
   const prefersReducedMotion = useReducedMotion();
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [liveMetric, setLiveMetric] = useState(142850);
   const [liveReqs, setLiveReqs] = useState(4820);
   const [activeCodeLine, setActiveCodeLine] = useState(0);
+
+  // Smooth GPU-driven motion values (avoids React re-renders on mousemove)
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const smoothX = useSpring(mouseX, { stiffness: 220, damping: 28 });
+  const smoothY = useSpring(mouseY, { stiffness: 220, damping: 28 });
+
+  // 3D tilt transformations per device
+  const macbookRotateX = useTransform(smoothY, (val) => (prefersReducedMotion ? 0 : -val * 0.5));
+  const macbookRotateY = useTransform(smoothX, (val) => (prefersReducedMotion ? 0 : val * 0.5));
+  const androidRotateX = useTransform(smoothY, (val) => (prefersReducedMotion ? 0 : val * 0.4));
+  const androidRotateY = useTransform(smoothX, (val) => (prefersReducedMotion ? 0 : val * 0.4));
+  const iphoneRotateX = useTransform(smoothY, (val) => (prefersReducedMotion ? 0 : -val * 0.4));
+  const iphoneRotateY = useTransform(smoothX, (val) => (prefersReducedMotion ? 0 : -val * 0.4));
 
   // Live telemetry counter ticker & code cursor animation
   useEffect(() => {
@@ -44,13 +57,19 @@ export const PulseIntelligenceVisual: React.FC = () => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;
-    setMousePos({ x: x * 12, y: y * 12 });
+    mouseX.set(x * 12);
+    mouseY.set(y * 12);
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
   };
 
   return (
     <div
       onMouseMove={handleMouseMove}
-      onMouseLeave={() => setMousePos({ x: 0, y: 0 })}
+      onMouseLeave={handleMouseLeave}
       className="relative w-full max-w-[640px] mx-auto select-none py-6 px-2 sm:px-4"
       style={{ perspective: 1200 }}
     >
@@ -61,19 +80,13 @@ export const PulseIntelligenceVisual: React.FC = () => {
       {/* 1. MAIN MACBOOK PRO MOCKUP (Centerpiece Device) */}
       {/* ======================================================== */}
       <motion.div
-        animate={
-          prefersReducedMotion
-            ? {}
-            : {
-                y: [0, -5, 0],
-                rotateX: -mousePos.y * 0.5,
-                rotateY: mousePos.x * 0.5,
-              }
-        }
+        animate={prefersReducedMotion ? {} : { y: [0, -5, 0] }}
+        style={{
+          rotateX: macbookRotateX,
+          rotateY: macbookRotateY,
+        }}
         transition={{
           y: { duration: 6, repeat: Infinity, ease: 'easeInOut' },
-          rotateX: { type: 'spring', stiffness: 220, damping: 28 },
-          rotateY: { type: 'spring', stiffness: 220, damping: 28 },
         }}
         className="relative z-10 mx-auto w-[94%] sm:w-[90%] lg:w-[92%]"
       >
@@ -234,24 +247,18 @@ export const PulseIntelligenceVisual: React.FC = () => {
       {/* 2. ANDROID PHONE MOCKUP (Left Foreground Complement) */}
       {/* ======================================================== */}
       <motion.div
-        animate={
-          prefersReducedMotion
-            ? {}
-            : {
-                y: [0, 6, 0],
-                rotateX: mousePos.y * 0.4,
-                rotateY: mousePos.x * 0.4,
-              }
-        }
+        animate={prefersReducedMotion ? {} : { y: [0, 6, 0] }}
+        style={{
+          rotateX: androidRotateX,
+          rotateY: androidRotateY,
+        }}
         transition={{
           y: { duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.2 },
-          rotateX: { type: 'spring', stiffness: 200, damping: 25 },
-          rotateY: { type: 'spring', stiffness: 200, damping: 25 },
         }}
         className="hidden sm:block absolute -bottom-4 -left-1 sm:left-1 w-[138px] sm:w-[162px] z-20"
       >
         {/* Android Matte Frame with Slim Bezel */}
-        <div className="rounded-[24px] sm:rounded-[28px] p-1.5 sm:p-2 bg-[#1A1A22] border border-zinc-700/80 shadow-[0_20px_45px_rgba(0,0,0,0.9)]">
+        <div className="rounded-[24px] sm:rounded-[28px] p-1.5 sm:p-2 bg-[#1A1A22] border border-zinc-700/80 shadow-[0_20px_45px_rgba(0,0,0,0.95)]">
           {/* Inner Screen */}
           <div className="rounded-[18px] sm:rounded-[22px] bg-[#09090D] border border-black overflow-hidden p-2.5 flex flex-col justify-between aspect-[9/19]">
             {/* Center Punch-Hole Camera */}
@@ -299,19 +306,13 @@ export const PulseIntelligenceVisual: React.FC = () => {
       {/* 3. IPHONE 15 PRO MOCKUP (Right Foreground Complement) */}
       {/* ======================================================== */}
       <motion.div
-        animate={
-          prefersReducedMotion
-            ? {}
-            : {
-                y: [0, -7, 0],
-                rotateX: -mousePos.y * 0.4,
-                rotateY: -mousePos.x * 0.4,
-              }
-        }
+        animate={prefersReducedMotion ? {} : { y: [0, -7, 0] }}
+        style={{
+          rotateX: iphoneRotateX,
+          rotateY: iphoneRotateY,
+        }}
         transition={{
           y: { duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 0.6 },
-          rotateX: { type: 'spring', stiffness: 200, damping: 25 },
-          rotateY: { type: 'spring', stiffness: 200, damping: 25 },
         }}
         className="absolute -bottom-6 right-0 sm:right-1 w-[142px] sm:w-[168px] z-20"
       >

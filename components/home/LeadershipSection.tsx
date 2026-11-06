@@ -57,7 +57,6 @@ export const LeadershipSection: React.FC<{ theme?: 'light' | 'dark' }> = ({
                   src={leader.image}
                   alt={`${leader.name} — ${leader.role}`}
                   fill
-                  priority
                   className="object-cover object-top origin-top scale-100 group-hover:scale-[1.04] filter grayscale contrast-[1.05] group-hover:grayscale-0 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

@@ -195,20 +195,20 @@ export const Logo: React.FC<LogoProps> = ({
     </svg>
   );
 
-  // Custom Engineered Wordmark: PULSECRAFT + TECHNOLOGIES INC.
+  // Custom Engineered Wordmark: Pulsecraft + Technologies Inc.
   const BrandText = (
     <div className="flex flex-col leading-none select-none text-left whitespace-nowrap">
-      <div className={`font-display font-extrabold ${currentSize.brand} tracking-[0.02em] flex items-center`}>
+      <div className={`font-display font-bold ${currentSize.brand} tracking-[-0.015em] flex items-center`}>
         <span style={{ color: pulseTextColor }}>
-          PULSE
+          Pulse
         </span>
         <span style={{ color: craftTextColor }}>
-          CRAFT
+          craft
         </span>
       </div>
       {variant !== 'icon' && (
         <span
-          className={`font-display font-semibold tracking-[0.22em] uppercase mt-1.5 ${currentSize.sub} ${subTextColor}`}
+          className={`font-sans font-medium tracking-[0.22em] uppercase mt-1 ${currentSize.sub} ${subTextColor}`}
         >
           Technologies Inc.
         </span>

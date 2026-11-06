@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
-import { PulseIntelligenceVisual } from '@/components/home/PulseIntelligenceVisual';
+import { PulseCraftHQVisual } from '@/components/home/PulseCraftHQVisual';
 import { ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/lib/config';
 
@@ -16,7 +16,6 @@ export const HeroSection: React.FC = () => {
     offset: ['start start', 'end start'],
   });
 
-  // Subtle Parallax & Cinematic Exit
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 24]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.75, 1], [1, 0.85, 0.2]);
 
@@ -28,133 +27,78 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[88vh] lg:min-h-[92vh] bg-dark-void text-white flex items-center justify-center pt-24 pb-16 lg:py-20 overflow-hidden"
+      className="relative min-h-screen w-full bg-dark-void text-white flex items-center overflow-hidden pt-24 sm:pt-28 pb-16 lg:py-0"
     >
-      {/* Layer 1: Clean Ambient Radial Lighting (Subtle Red Vignette) */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-b from-[#FF2A2A]/10 via-[#FF2A2A]/05 to-transparent rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-white/[0.02] rounded-full blur-[160px] pointer-events-none z-0" />
+      {/* ======================================================== */}
+      {/* RIGHT-ALIGNED FULL-HEIGHT BUILDING PHOTO (TOP TO BOTTOM) */}
+      {/* ======================================================== */}
+      <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[60%] xl:w-[56%] h-full pointer-events-none select-none z-0">
+        <PulseCraftHQVisual />
+      </div>
 
-      {/* Layer 2: Hero Content with Multi-Device Product Showcase */}
+      {/* Layer 1: Clean Ambient Radial Lighting behind Left Headline */}
+      <div className="absolute top-1/3 left-10 w-[500px] h-[350px] bg-gradient-to-tr from-[#FF2A2A]/15 via-[#FF2A2A]/05 to-transparent rounded-full blur-[140px] pointer-events-none z-0" />
+
+      {/* Layer 2: Hero Left Content (Max width for perfect editorial readability) */}
       <motion.div
         style={prefersReducedMotion ? {} : { y: contentY, opacity: contentOpacity }}
-        className="relative z-10 w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8"
+        className="relative z-10 w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          {/* Left Column: Brand Eyebrow, Heading, Subtext & CTA */}
-          <div className="lg:col-span-6 text-left">
-            {/* 1. Minimal Eyebrow Badge (Entrance: 100ms) */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ ...transitionConfig, delay: 0.1 }}
-              className="inline-flex items-center gap-2 mb-6 select-none"
-            >
-              {/* Subtle 5.5px Pulsing Pure Red Dot */}
-              <span className="relative flex h-2 w-2 items-center justify-center">
-                <span
-                  className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF2A2A] opacity-60"
-                  style={{ animationDuration: '2.5s' }}
-                />
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#FF2A2A] shadow-[0_0_8px_rgba(255,42,42,0.9)]" />
-              </span>
-
-              {/* Eyebrow Label Text */}
-              <span className="text-[11px] sm:text-xs font-sans font-medium tracking-[0.12em] text-zinc-300 uppercase flex items-center gap-2">
-                <span className="text-xs" role="img" aria-label="Canada">
-                  🇨🇦
-                </span>
-                <span className="font-display font-bold text-white tracking-[0.14em]">PULSECRAFT</span>
-                <span className="text-zinc-600">|</span>
-                <span className="text-zinc-400 font-sans tracking-[0.08em]">CANADIAN ENTERPRISE TECHNOLOGY</span>
-              </span>
-            </motion.div>
-
-            {/* 2. Hero Headline (Entrance: 200ms) */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ ...transitionConfig, delay: 0.2 }}
-              className="text-4xl sm:text-5xl lg:text-[52px] xl:text-[60px] font-display font-bold tracking-[-0.03em] leading-[1.12] sm:leading-[1.14] text-[#FFFFFF]"
-            >
-              Ideas Have a{' '}
-              <span className="text-[#FF2A2A] font-extrabold drop-shadow-[0_0_24px_rgba(255,42,42,0.35)]">
-                Pulse.
-              </span>
-              <br />
-              <span className="inline-block mt-2">
-                Intelligence Gives Them{' '}
-                <span className="text-[#FFFFFF] font-extrabold">
-                  Life.
-                </span>
-              </span>
-            </motion.h1>
-
-            {/* 3. Short Supporting Paragraph (Entrance: 320ms) */}
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ ...transitionConfig, delay: 0.32 }}
-              className="mt-5 text-base sm:text-lg text-zinc-400 max-w-lg leading-relaxed font-normal"
-            >
-              {SITE_CONFIG.heroSubtext}
-            </motion.p>
-
-            {/* 4. Minimal CTAs (Entrance: 420ms) */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ ...transitionConfig, delay: 0.42 }}
-              className="mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
-            >
-              <Button
-                href="/contact"
-                size="md"
-                variant="glow"
-                className="text-sm px-5 py-2.5 rounded-[9px]"
-                rightIcon={<ArrowRight className="w-4 h-4" />}
-              >
-                Get in Touch
-              </Button>
-              <Button
-                href="/services"
-                size="md"
-                variant="outline"
-                className="text-sm px-5 py-2.5 rounded-[9px]"
-              >
-                Explore Our Capabilities
-              </Button>
-            </motion.div>
-
-            {/* 5. Trust Metadata (Entrance: 520ms) */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ ...transitionConfig, delay: 0.52 }}
-              className="mt-8 pt-5 border-t border-zinc-800/60 flex flex-wrap items-center gap-5 text-xs text-zinc-400 font-sans font-medium"
-            >
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF2A2A]" />
-                <span>Intelligent Systems</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF2A2A]" />
-                <span>Web · iOS · Android</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF2A2A]" />
-                <span>Canadian Governance</span>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Right Column: Multi-Device Technology Showcase (MacBook Pro + iPhone 15 Pro + Android Flagship) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ ...transitionConfig, delay: 0.28 }}
-            className="lg:col-span-6 relative flex items-center justify-center"
+        <div className="max-w-xl lg:max-w-2xl text-left">
+          {/* 1. Hero Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...transitionConfig, delay: 0.15 }}
+            className="text-4xl sm:text-5xl lg:text-[54px] xl:text-[62px] font-display font-bold tracking-[-0.03em] leading-[1.12] sm:leading-[1.14] text-[#FFFFFF]"
           >
-            <PulseIntelligenceVisual />
+            Ideas Have a{' '}
+            <span className="text-[#FF2A2A] font-extrabold drop-shadow-[0_0_24px_rgba(255,42,42,0.35)]">
+              Pulse.
+            </span>
+            <br />
+            <span className="inline-block mt-2">
+              Intelligence Gives Them{' '}
+              <span className="text-[#FFFFFF] font-extrabold">
+                Life.
+              </span>
+            </span>
+          </motion.h1>
+
+          {/* 2. Short Supporting Paragraph */}
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...transitionConfig, delay: 0.28 }}
+            className="mt-6 text-base sm:text-lg text-zinc-300 max-w-lg leading-relaxed font-normal"
+          >
+            {SITE_CONFIG.heroSubtext}
+          </motion.p>
+
+          {/* 3. Minimal CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...transitionConfig, delay: 0.38 }}
+            className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5"
+          >
+            <Button
+              href="/contact"
+              size="md"
+              variant="glow"
+              className="text-sm px-6 py-3 rounded-[9px]"
+              rightIcon={<ArrowRight className="w-4 h-4" />}
+            >
+              Get in Touch
+            </Button>
+            <Button
+              href="/services"
+              size="md"
+              variant="outline"
+              className="text-sm px-6 py-3 rounded-[9px]"
+            >
+              Explore Our Capabilities
+            </Button>
           </motion.div>
         </div>
       </motion.div>
